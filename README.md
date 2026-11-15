@@ -2,6 +2,8 @@
 
 [English](README_en.md)
 
+[代码 · MIT](LICENSE) · [提示词库与演示 GIF · CC BY-NC 4.0](库/LICENSE.md)
+
 **一句话：** 让 AI 助手（Claude Code、Codex）或你自己，照出过好片的写法写 MiniMax H3 打戏提示词；写完自动检查，过了再一条命令出片。
 
 | 以小打大（C1） | 一对一（k3b） | 空中对决（k4d） |
@@ -163,8 +165,8 @@ config.example.json  出片连接配置样例
 
 ## 许可与致谢
 
-- 代码（`工具/`）：[MIT](LICENSE)。
-- 提示词库（`库/`、`库对照.md`）和效果 GIF：[CC BY-NC 4.0](库/LICENSE.md)，可以改、可以分享，注明出处，不能商用。
+- `工具/` 中的代码采用 [MIT](LICENSE)。
+- 本项目的提示词库（`库/`、`库对照.md`）和演示 GIF（`docs/效果/`）采用 [CC BY-NC 4.0](库/LICENSE.md)。署名、修改标注和第三方来源见许可说明。
 - **致谢**
   - BUNNY 作者（Hugging Face [JOKER141](https://huggingface.co/JOKER141)，Civitai 上叫 FourBunny）：三个打斗 LoRA；16 个招牌写法学自作者的演示提示词（库里只收了短语，原文不随仓库发布）；我们的工作流是在作者公开的 SelfLift 工作流基础上改的（仓库不放工作流文件，只写搭法）。
   - [MiniMax H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) 和 [Comfy-Org](https://huggingface.co/Comfy-Org/MiniMax-H3) 的 ComfyUI 版本；turbo LoRA 的打包者 [drbaph](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI)；混合主模型 [smhfacct](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models)；潜空间放大器 [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler)；以及上面三个插件的作者。

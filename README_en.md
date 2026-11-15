@@ -2,6 +2,8 @@
 
 [中文](README.md)
 
+[Code · MIT](LICENSE) · [Prompt library and demo GIFs · CC BY-NC 4.0](库/LICENSE.md)
+
 **In one line:** lets an AI assistant (Claude Code, Codex), or you, write MiniMax H3 fight-scene prompts using phrasing that has already produced good footage. Each prompt is checked automatically, and once it passes, one command renders it.
 
 | Small vs. giant (C1) | One-on-one (k3b) | Aerial duel (k4d) |
@@ -168,8 +170,8 @@ config.example.json  Render connection settings (example)
 
 ## License and credits
 
-- Code (`工具/`): [MIT](LICENSE).
-- Prompt library (`库/`, `库对照.md`) and demo GIFs: [CC BY-NC 4.0](库/LICENSE.md). You may adapt and share them with attribution, but not for commercial use.
+- The code in `工具/` is licensed under [MIT](LICENSE).
+- This project's prompt library (`库/`, `库对照.md`) and demo GIFs (`docs/效果/`) are licensed under [CC BY-NC 4.0](库/LICENSE.md). See the license notice for attribution, marking changes, and third-party credits.
 - **Credits**
   - The BUNNY author ([JOKER141](https://huggingface.co/JOKER141) on Hugging Face, FourBunny on Civitai): the three fight LoRAs. The 16 signature phrasings were learned from the author's demo prompts; only the short phrases are in the library, not the original prompts. Our workflow is based on the author's public SelfLift workflow (the repository ships only instructions for building it, not the workflow file).
   - [MiniMax H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) and the [Comfy-Org](https://huggingface.co/Comfy-Org/MiniMax-H3) ComfyUI release.

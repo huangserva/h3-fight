@@ -19,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-本 MIT 许可只适用于代码（工具/ 目录）。提示词库（库/、库对照.md）和 docs/效果/ 里的 GIF 用 CC BY-NC 4.0，见 库/LICENSE.md。
-The MIT license above covers the code (工具/) only. The prompt library (库/, 库对照.md) and the GIFs in docs/效果/ are CC BY-NC 4.0; see 库/LICENSE.md.
