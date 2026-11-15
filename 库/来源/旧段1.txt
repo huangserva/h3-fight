@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the female warrior in <Picture 1>: her facial identity, porcelain skin, silver-white long hair with straight bangs, and ethereal yet lethal demeanor come from <Picture 1>. Her attire consists of a glowing white silk robe with intricate gold embroidery and metallic accents, as shown in <Picture 1>. Her primary weapon is a Tachi (Japanese-style sword) which emits intense crimson red energy effects during combat.
+<Subject 2> is the ruined cliff-top temple terrace in <Picture 2>: the cracked stone floor with carved circular patterns, broken stone pillars, the cracked bronze bell hanging under its wooden frame, the red-pillared temple hall, the red maple tree, the sea of clouds and the huge blood-red moon all come from <Picture 2>. <Subject 4> waits there.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR) for satin fabrics and armor, dynamic volumetric fog, and high-gloss material response.
+<Subject 4> is the rival swordsman in <Picture 3>: his young cold face, long black hair tied in a high topknot, black robe with dark purple trim and torn hem, and the long straight jian wreathed in dark purple flame all come from <Picture 3>.
+
+summary:
+[reference generation] The target video is a 10-second cinematic opening of a high-fantasy duel. Under a huge blood-red moon, the same cold, lethal female warrior with silver-white hair and a white silk robe climbs the last stone steps onto a ruined cliff-top temple terrace above a sea of clouds, where <Subject 4>, the black-robed rival swordsman, stands waiting with his back to her beneath the cracked bronze bell. The sequence progresses from a slow descending establishing shot of the terrace, to her calm ascent up the stairway, a close-up of her face as she sees him, and ends with the two figures framed far apart across the empty terrace in silence. The visual style employs 3D CG cinematic realism with PBR materials and volumetric fog. No fighting yet. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 2] through [Shot 4]): fully_preserved - The warrior's face, silver-white hair with bangs and white silk robe with gold embroidery from <Picture 1> remain consistent throughout all shots.
+<Subject 2> (appears in [Shot 1] through [Shot 4]): fully_preserved - The temple terrace, bronze bell, maple tree, sea of clouds and blood-red moon from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 4]): weak_reference - The overall visual quality adheres to the defined 3D CG cinematic style with PBR rendering and volumetric lighting.
+<Subject 4> (appears in [Shot 1] and [Shot 4]): fully_preserved - <Subject 4>'s topknot, black robe with purple trim and purple-flamed jian from <Picture 3> remain consistent.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic, featuring global illumination, physically-based rendering for satin fabrics, and dynamic volumetric fog. The color palette is dominated by cold whites, silvers, deep night blues, the red maple leaves and the blood-red moon. The rhythm is slow, heavy and silent, building tension.
+
+[Shot 1] Extreme wide aerial shot starting high above the sea of clouds, slowly descending toward the ruined temple terrace on the cliff top. The huge blood-red moon hangs behind the red-pillared temple hall, its light spilling over broken stone pillars and the cracked bronze bell under its wooden frame. Red maple leaves drift across the frame in the wind, and layers of volumetric fog roll slowly over the edge of the cliff. On the far side of the terrace, the small figure of <Subject 4> stands motionless beneath the bell with his back to the camera, the dark purple glow of his sheathed jian flickering faintly at his waist. Slow, heavy, silent rhythm.
+
+[Shot 2] At 00:03.000, the camera cuts to a low-angle tracking shot at the top of the long stone stairway carved into the cliff. <Subject 1> climbs the last steps out of the fog one step at a time, her Tachi sheathed at her hip, her left hand resting lightly on the scabbard. Her silver-white hair and the gold-embroidered hem of her white silk robe lift gently in the wind, and fallen maple leaves skitter away from her feet across the stone. The camera rises with her as she steps onto the terrace, revealing the whole courtyard and the blood-red moon ahead of her. Calm, steady pace, each footstep clearly heard.
+
+[Shot 3] At 00:06.000, the camera cuts to a facial close-up of <Subject 1>, lit by the red moonlight. Cold close-up locking on her face, her eyes slowly lifting to fix on the distant figure beneath the bronze bell. Strands of silver hair drift across her porcelain face, and a single maple leaf passes in front of her eyes in shallow focus. Her expression stays completely still and lethal, her lips closed. Her fingers tighten around the scabbard of her Tachi, and a faint crimson glow seeps out from the gap between the guard and the scabbard.
+
+[Shot 4] At 00:08.000, the camera cuts to a symmetrical wide shot across the terrace, stable framing. <Subject 1> stands small on the left side and <Subject 4> on the right beneath the bronze bell, the long cracked stone floor with carved circular patterns stretching between them, the blood-red moon centered behind the temple hall. Leaves swirl slowly in the empty space between them. The bell gives one low, faint hum in the wind. Neither of them moves. Silent, tense rhythm, killing intent quietly building.
+
+overall_soundscape:
+Strong high-altitude wind and the rustle of maple leaves. Soft, clear footsteps on stone stairs. Silk fabric fluttering. A low, faint hum from the bronze bell. A distant deep rumble beneath the sea of clouds. Quiet, tense atmosphere with no combat sounds.
+
+non_diegetic_music:
+N/A

@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the young samurai whose facial identity, sharp amber eyes, messy dark hair and determined demeanor come from the visual description. He wears a dark blue haori over a white kimono with a red cord, and wields a katana whose slashes leave trails of golden flame.
+<Subject 2> is a giant horned demon with dark red skin and long claws, standing on traditional Japanese tiled rooftops under a huge full moon, with cherry blossom petals in the wind.
+<Subject 3> is the visual style definition: high-quality 2D Japanese anime, sharp clean line art, cel shading, dramatic speed lines, vivid colors, theatrical-film level animation.
+
+summary:
+[reference generation] The target video is a 10-second 2D anime battle featuring a young samurai fighting a giant demon on moonlit rooftops. The sequence progresses from a dash across rooftops to rapid katana exchanges, a high leap, a flaming downward slash, and ends with the samurai landing as the demon dissolves into ash. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 5]): fully_preserved - The samurai's face, haori and katana flame effects remain consistent.
+<Subject 2> (appears in [Shot 1] through [Shot 5]): fully_preserved - The demon and the moonlit rooftops remain consistent.
+<Subject 3> (appears in [Shot 1] through [Shot 5]): weak_reference - The overall visual quality adheres to the defined style.
+
+detailed_description:
+The target video uses theatrical 2D anime art with clean line art, cel shading, speed lines and vivid golden flame effects against a deep blue night.
+
+[Shot 1] Low-angle shot. <Subject 1> dashes across the rooftop tiles at extreme speed, tiles flying behind him, haori snapping in the wind, speed lines streaking past.
+
+[Shot 2] At 00:02.000, dynamic tracking shot. The demon swipes with its claws; he deflects three strikes with his katana, each clash bursting into golden sparks, then slips under the arm and cuts across the demon's side with a trail of flame.
+
+[Shot 3] At 00:04.500, wide shot against the full moon. He leaps high into the air, silhouetted, spins once and raises the katana as golden flames wrap around the blade.
+
+[Shot 4] At 00:06.500, close-up of his face, amber eyes glowing, petals passing in front of the camera.
+
+[Shot 5] At 00:08.000, he slashes straight down; a giant arc of golden fire splits the demon in two. He lands on one knee on the rooftop as the demon dissolves into ash and embers.
+
+overall_soundscape:
+Anime-style katana clashes, roaring fire, demon roars, rushing wind and falling roof tiles.
+
+non_diegetic_music:
+N/A

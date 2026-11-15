@@ -1,0 +1,3 @@
+Pillow
+numpy
+opencv-python   # 只有 去字幕.py 用 / only used by 去字幕.py

@@ -1,0 +1,35 @@
+subject_definitions:
+<Subject 1> is the female warrior in <Picture 1>: her facial identity, porcelain skin, silver-white long hair with straight bangs, and ethereal yet lethal demeanor come from <Picture 1>. Her attire consists of a glowing white silk robe with intricate gold embroidery and metallic accents, as shown in <Picture 1>. Her primary weapon is a Tachi (Japanese-style sword) which emits intense crimson red energy effects during combat.
+<Subject 2> is the ruined cliff-top temple terrace in <Picture 2>: the cracked stone floor with carved circular patterns, broken stone pillars, the cracked bronze bell hanging under its wooden frame, the red-pillared temple hall, the red maple tree, the sea of clouds and the huge blood-red moon all come from <Picture 2>. <Subject 4> waits there.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR) for satin fabrics and armor, dynamic volumetric fog, and high-gloss material response.
+<Subject 4> is the rival swordsman in <Picture 3>: his young cold face, long black hair tied in a high topknot, black robe with dark purple trim and torn hem, and the long straight jian wreathed in dark purple flame all come from <Picture 3>.
+
+summary:
+[reference generation] The target video is a 15-second high-fantasy duel climax featuring the same cold, lethal female warrior with silver-white hair and a white silk robe against <Subject 4>, the rival black-robed swordsman, on a ruined cliff-top temple terrace under a blood-red moon. The sequence progresses from both charging through the dust at each other, to his furious flame combo that she deflects, her counter that tears his robe and staggers him, a cold close-up as she sees the opening, a hard block and a disarming strike that sends his jian spinning into the bronze bell, and concludes with <Subject 4> kneeling defeated while she holds her Tachi at his throat. The visual style employs 3D CG cinematic realism with PBR materials, volumetric fog, and intense crimson red sword-light effects against dark purple flame. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 6]): fully_preserved - The warrior's face, silver-white hair with bangs and white silk robe with gold embroidery from <Picture 1> remain consistent throughout all shots, together with the specific crimson red energy sword effects.
+<Subject 2> (appears in [Shot 1] through [Shot 6]): fully_preserved - The temple terrace, bronze bell, maple tree, sea of clouds and blood-red moon from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 6]): weak_reference - The overall visual quality adheres to the defined 3D CG cinematic style with PBR rendering and volumetric lighting.
+<Subject 4> (appears in [Shot 1] through [Shot 6]): fully_preserved - <Subject 4>'s face, topknot, black robe with purple trim and purple-flamed jian from <Picture 3> remain consistent throughout all shots.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic, featuring global illumination, physically-based rendering for satin fabrics and armor, and dynamic volumetric fog. The color palette is dominated by cold whites, silvers, intense crimson red energy effects, dark purple flame and the blood-red moon.
+
+[Shot 1] Extreme low-angle wide shot starting static on <Subject 1> and <Subject 4> crouched on opposite sides of a smoking crater on the temple terrace. Within the first 1 second, both burst forward through the dust at the same instant; the dust cloud is torn apart in two tunnels, broken tiles flipping up behind their feet. She slides low under the smoke and they meet at the center of the crater, blades crashing together; the camera freezes on a close-up of the crossed blades as crimson and purple sparks burst across the frame.
+
+[Shot 2] At 00:01.000, the camera cuts to a dynamic close-range tracking shot. <Subject 4> attacks furiously with a fast purple-flame combo—diagonal slash, straight thrust, spinning backhand slash—each swing leaving a burning violet arc in the air. <Subject 1> deflects every strike with zero lag, sparks spraying across her face and robe. Brief slow-motion as their blades lock and she presses him back with her shoulder, then the rhythm instantly doubles and they trade blows across the courtyard, fallen leaves bursting into flame and embers around them.
+
+[Shot 3] At 00:04.000, the camera cuts to a fast low side-tracking shot. <Subject 1> slips past his thrust, leaving afterimages, and counters with three ultra-high-speed strikes—rising cut, horizontal slash, spinning cut. The first knocks his blade wide, the second tears open the front of his black robe with a line of sparks, the third sends him staggering back several steps across the tiles, a broken pillar beside him split cleanly in two and toppling, rapid rhythm without drag.
+
+[Shot 4] At 00:07.000, the camera orbits 360 degrees rapidly around <Subject 1>, then instantly cuts to a facial close-up. Cold close-up locking on her face, eyes narrowing as she watches <Subject 4> gather all his purple flame into one last attack, the flame on his jian swelling into a roaring pillar. She lowers her Tachi to her side in a still, ready stance, crimson runes unfolding around the blade, the wind of his rising power whipping her silver hair and robe.
+
+[Shot 5] At 00:10.000, the camera cuts to a vertical rapid falling shot, freezing at the moment of impact. <Subject 4> brings down an overhead strike wreathed in a pillar of purple flame; <Subject 1> hard-blocks it, the ground cracking in a ring beneath her feet, instantly dissipates the force and counters. She spins and strikes his blade near the hilt, knocking the jian out of his hand; it spins through the air and stabs into the cracked bronze bell, which rings out with a visible shockwave rippling across the terrace.
+
+[Shot 6] At 00:12.000, the camera cuts to a slow pull-back wide establishing shot, stable framing. <Subject 4> drops to one knee, disarmed, his black robe torn and smoking, breathing hard. <Subject 1> steps in front of him, her Tachi held level at his throat, the blade still retaining red sword-light. His jian hangs stuck in the bronze bell behind them, its purple flame flickering. Dust slowly settles and leaves drift down under the blood-red moon. Her white hair and robe flap in the wind, her gaze cold and unmoving.
+
+overall_soundscape:
+High-frequency combat sound effects throughout. Sharp metallic blade-on-blade clashes and crackling sparks. Dense red sword qi whistling and the roar of purple flame swelling into a pillar. Stone cracking and a pillar toppling. A heavy bronze bell ringing out loudly and humming afterward. The soundscape is dominated by high-speed whooshes and low-frequency booms, settling into wind and the fading bell.
+
+non_diegetic_music:
+N/A

@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the male fighter whose facial identity, short black hair, light stubble and tough focused demeanor come from the visual description. He wears a soaked dark grey hoodie, black cargo pants and black boots. He fights unarmed.
+<Subject 2> is the environment: a narrow back alley at night in heavy rain, neon signs reflecting on wet asphalt, metal trash bins, wooden crates and steam rising from vents.
+<Subject 3> is the visual style definition: live-action modern action film photography, realistic human faces and skin, practical stunts, handheld camera, cinematic neon lighting, shot on digital cinema camera.
+
+summary:
+[reference generation] The target video is a 10-second live-action street fight featuring a man in a grey hoodie fighting five thugs in a rainy neon alley. The sequence progresses from a sudden attack to fast boxing exchanges, a throw into trash bins, a jumping knee, and ends with him standing alone in the rain. Hard-hitting realistic choreography, normal speed. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 5]): fully_preserved - The fighter's face, hoodie and build remain consistent.
+<Subject 2> (appears in [Shot 1] through [Shot 5]): fully_preserved - The rainy neon alley keeps consistent lighting and rain.
+<Subject 3> (appears in [Shot 1] through [Shot 5]): weak_reference - The overall visual quality adheres to the defined style.
+
+detailed_description:
+The target video uses realistic modern action-film photography with wet neon reflections, practical rain and hard-hitting stunt choreography.
+
+[Shot 1] Medium shot. At 00:00.300 a thug swings a metal pipe at <Subject 1>; he ducks under it, rain spraying off the pipe, and answers with a fast left-right combination to the thug's ribs and jaw.
+
+[Shot 2] At 00:02.000, handheld tracking shot. Two thugs rush him; he blocks a punch, elbows one in the face, grabs the other by the jacket and throws him into a row of metal trash bins that crash and scatter.
+
+[Shot 3] At 00:04.500, low-angle wide shot. A fourth thug charges; he leaps and drives a flying knee into his chest, both landing in a splash of water on the asphalt.
+
+[Shot 4] At 00:06.500, close-up on his face in the rain, water dripping from his hair, neon light on his cheek, jaw clenched.
+
+[Shot 5] At 00:08.000, wide shot. The last thug hesitates, then attacks; he catches the punch, twists the arm and sweeps the legs, dropping him into a puddle, then stands alone breathing in the rain.
+
+overall_soundscape:
+Heavy rain, realistic punches and body impacts, metal bins crashing, splashing water and heavy breathing.
+
+non_diegetic_music:
+N/A

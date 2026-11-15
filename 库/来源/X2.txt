@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the female swordswoman whose facial identity, sharp eyes, black hair in a tight bun with a jade hairpin, and focused lethal demeanor come from the visual description. Her attire is a fitted light-green martial robe with a dark leather belt and wrist guards. Her weapon is a straight Chinese jian sword with a plain steel blade.
+<Subject 2> is the environment: a dense bamboo forest at dusk with tall swaying bamboo, scattered falling leaves, low mist and warm golden backlight.
+<Subject 3> is the visual style definition: live-action wuxia film photography, realistic human faces and skin, real fabric and steel, natural lighting, shot on 35mm cinema camera, no CGI glow, no energy effects.
+
+summary:
+[reference generation] The target video is a 10-second live-action wuxia fight featuring a swordswoman in a green robe fighting four masked black-clad assassins in a bamboo forest. The sequence progresses from a sudden ambush to fast sword exchanges, a leap off a bamboo stalk, a spinning finishing cut, and ends with her sheathing the sword. Real stunt choreography, no slow motion. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 5]): fully_preserved - The swordswoman's face, hair bun, green robe and jian sword remain consistent.
+<Subject 2> (appears in [Shot 1] through [Shot 5]): fully_preserved - The bamboo forest keeps consistent dusk lighting and mist.
+<Subject 3> (appears in [Shot 1] through [Shot 5]): weak_reference - The overall visual quality adheres to the defined style.
+
+detailed_description:
+The target video uses realistic live-action wuxia photography with natural warm backlight, real fabric movement and practical effects only.
+
+[Shot 1] Medium shot. <Subject 1> walks through the bamboo; at 00:00.500 two masked assassins drop from above with sabers. She draws her jian in one motion and blocks both blades, sparks flying from the steel.
+
+[Shot 2] At 00:02.000, handheld tracking shot. She trades six fast strikes with the two assassins, ducks a horizontal cut, slashes one across the arm and kicks the other into a bamboo stalk that bends and snaps back.
+
+[Shot 3] At 00:04.500, low-angle wide shot. Two more assassins charge from the sides; she runs two steps up a thick bamboo stalk, flips backward over them and lands behind them, cutting both down as leaves swirl around her.
+
+[Shot 4] At 00:07.000, close-up on her face, breathing hard, a strand of hair across her eyes, the blade edge in the foreground.
+
+[Shot 5] At 00:08.500, wide shot. The last assassin attacks; she spins under his saber and finishes with a reverse cut, then sheathes her sword as he falls into the leaves.
+
+overall_soundscape:
+Realistic sword clashes, rustling bamboo, footsteps on dry leaves, fabric whooshes and heavy breathing.
+
+non_diegetic_music:
+N/A

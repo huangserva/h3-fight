@@ -1,0 +1,35 @@
+subject_definitions:
+<Subject 1> is the hero in <Picture 1>: a lean teenage fighter; his face, hair, hat and outfit all come from <Picture 1>. His body is made of rubber: his arms and legs stretch many meters and snap back, and his body bends and bounces like rubber when hit. He fights unarmed with stretching punches and kicks. His pose and facing direction always follow the action and his opponent, never the standing pose of the reference picture.
+<Subject 2> is the wide stone rooftop of a tall tower in <Picture 2>: square stone tiles, broken stone walls and several stone pillars along the edge, a churning sea in the distance under an orange-red sunset sky with heavy clouds. At the start of this video one stone pillar is shattered, a section of wall has collapsed and the floor is cracked; they stay that way throughout this video.
+<Subject 3> is the visual style definition: high-quality 2D Japanese anime, theatrical-film level animation, sharp clean line art, cel shading, bold impact frames, dramatic speed lines, vivid saturated colors, stretching rubber-limb animation with smears and big stone-shattering destruction.
+<Subject 4> is the assassin in <Picture 3>: a tall, muscular man in a dark suit with cold, expressionless eyes; his face, hair and outfit all come from <Picture 3>. He masters six assassin techniques: a flash-step (he vanishes and reappears elsewhere in a blink, leaving an afterimage), a finger-bullet thrust (a finger jab as deadly as a bullet), an iron-body guard (his body turns hard as iron with a dark metallic sheen), an air-step (he kicks off the air itself to jump in mid-air) and air-blade kicks (his kicks release white crescent-shaped air blades). His pose and facing direction always follow the action and his opponent, never the standing pose of the reference picture.
+
+summary:
+[reference generation] The target video is a 15-second 2D anime duel continuing directly from the first frame on the rooftop of the tower. <Subject 4> starts vanishing and reappearing around <Subject 1>, who punches only afterimages and gets jabbed from behind; <Subject 1> tricks him by stretching an arm behind himself, catches him and headbutts him. <Subject 4> answers by kicking <Subject 1> straight through a stone wall. It concludes on the key moment: <Subject 1> crawls out of the rubble, bruised and furious, and roars at <Subject 4>. The emotional arc: confusion → a clever counter → being crushed → furious resolve. One spoken line of Japanese dialogue from <Subject 1>; no subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 6]): fully_preserved - <Subject 1>'s face, hair, outfit and colors from <Picture 1> remain consistent throughout all shots.
+<Subject 2> (appears in [Shot 1] through [Shot 6]): fully_preserved - The stone rooftop, broken walls and pillars, the distant gates and the sunset sky from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 6]): weak_reference - The overall visual quality adheres to the defined 2D anime style with cel shading and impact frames.
+<Subject 4> (appears in [Shot 1] through [Shot 6]): fully_preserved - <Subject 4>'s face, hair, outfit and colors from <Picture 3> remain consistent throughout all shots.
+
+detailed_description:
+The target video utilizes high-quality 2D Japanese anime with theatrical-film level animation, sharp clean line art, cel shading, bold impact frames, rubber-stretch smears and dramatic speed lines. The color palette is dominated by the orange-red sunset sky, the pale stone rooftop, the dark churning sea, <Subject 1>'s outfit against <Subject 4>'s black suit.
+
+[Shot 1] Medium shot continuing from the first frame, <Subject 1> on the left and <Subject 4> on the right in fighting stances. Within the first 1 second, <Subject 4> vanishes, leaving only an afterimage and a puff of dust, and reappears right in front of <Subject 1> before he can blink; he drives a finger thrust into <Subject 1>'s shoulder. <Subject 1>'s rubber body stretches deep around the finger and snaps back, flinging him backward across the tiles in a long trail of dust and cracked stone; the camera freezes on a close-up of the finger sinking into the stretched rubber shoulder.
+
+[Shot 2] At 00:01.000, the camera cuts to a dynamic tracking shot circling <Subject 1>. He punches furiously in every direction, but every punch passes through an afterimage as <Subject 4> vanishes and reappears left, right and behind him at blinding speed, the stone floor cracking where each fist lands. <Subject 4> flicks him with finger thrusts from behind with zero lag. Brief slow-motion as <Subject 1> spins around wide-eyed, then the rhythm instantly doubles, afterimages of <Subject 4> flickering all around him like a ring of black suits.
+
+[Shot 3] At 00:04.000, the camera cuts to a fast low side-tracking shot. <Subject 1> feints a punch forward while secretly stretching his other arm far behind himself; as <Subject 4> reappears behind him, the rubber arm wraps around <Subject 4>'s body in a coil and reels him in like a slingshot. <Subject 1> slams a headbutt into his forehead with a ringing crack, <Subject 4>'s hat flying off, an impact wave blasting dust off the floor around them, rapid rhythm without drag.
+
+[Shot 4] At 00:07.000, the camera cuts to a wide-angle low angle with a rising crane shot. <Subject 4> lands on one hand, touches the blood at his lip, and his eyes turn murderous; he spins and releases three ultra-high-speed kicks at point-blank range, the third launching a huge white crescent air blade that hits <Subject 1> square in the chest and blasts him backward straight through a thick stone wall, the wall exploding into a chain reaction of flying blocks and dust, high-frequency camera shake.
+
+[Shot 5] At 00:10.000, the camera orbits 360 degrees rapidly around the rubble, then instantly cuts to a facial close-up. Close-up locking on <Subject 1>'s face as he crawls out of the broken stone: bruised and bleeding, his hat shadowing his eyes, then he lifts his head, eyes blazing with fury, veins on his temple, and with his mouth clearly visible, in a loud, raspy, energetic young male voice speaking Japanese (S1) he roars: <d>[Japanese] 仲間を泣かせるやつは、絶対に許さねぇ！</d> An impact wave of wind blasts the dust out of the hole around him.
+
+[Shot 6] At 00:12.000, the camera cuts to a slow pull-back wide establishing shot, stable framing. <Subject 1> stands up in the jagged hole of the broken wall on the left, cracks his knuckles and settles his hat; <Subject 4> on the right picks up his hat, puts it back on and straightens his tie. Dust and small stones are still falling from the broken wall, sparks of sunset light flickering across the cracked rooftop between them.
+
+overall_soundscape:
+<Subject 1>'s loud, raspy, furious roar. High-frequency anime combat sound effects throughout: the sharp zip of each vanish, whooshing punches into empty air, rubber stretching and snapping, a ringing headbutt crack, the shriek of the air blade and a huge crash of stone, then falling rubble.
+
+non_diegetic_music:
+N/A

@@ -1,0 +1,11 @@
+{
+ "_说明 / note": "复制成 config.json 再改。mode=local：ComfyUI 就在这台机器或局域网，直接用 HTTP；mode=ssh：ComfyUI 在远程机器上，经 ssh 提交和下载。 Copy to config.json and edit. mode=local talks to ComfyUI over HTTP; mode=ssh submits and downloads through ssh.",
+ "mode": "local",
+ "comfy_url": "http://127.0.0.1:8188",
+ "ssh_host": "",
+ "remote_comfy_dir": "",
+ "output_subfolder": "h3_fight",
+ "subtitle_font": "",
+ "library_page": "",
+ "video_root": ""
+}

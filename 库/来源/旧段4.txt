@@ -1,0 +1,35 @@
+subject_definitions:
+<Subject 1> is the female warrior in <Picture 1>: her facial identity, porcelain skin, silver-white long hair with straight bangs, and ethereal yet lethal demeanor come from <Picture 1>. Her attire consists of a glowing white silk robe with intricate gold embroidery and metallic accents, as shown in <Picture 1>. Her primary weapon is a Tachi (Japanese-style sword) which emits intense crimson red energy effects during combat.
+<Subject 2> is the ruined cliff-top temple terrace in <Picture 2>: the cracked stone floor with carved circular patterns, broken stone pillars, the cracked bronze bell hanging under its wooden frame, the red-pillared temple hall, the red maple tree, the sea of clouds and the huge blood-red moon all come from <Picture 2>. <Subject 4> waits there.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR) for satin fabrics and armor, dynamic volumetric fog, and high-gloss material response.
+<Subject 4> is the rival swordsman in <Picture 3>: his young cold face, long black hair tied in a high topknot, black robe with dark purple trim and torn hem, and the long straight jian wreathed in dark purple flame all come from <Picture 3>.
+
+summary:
+[reference generation] The target video is a 15-second high-fantasy aerial duel featuring the same cold, lethal female warrior with silver-white hair and a white silk robe against <Subject 4>, the rival black-robed swordsman, high above a sea of clouds under a huge blood-red moon, with the ruined cliff-top temple terrace far below. The sequence progresses from passing clashes in mid-air, to rapid exchanges in free fall, a collision of her crimson sword qi storm with his purple flame wave, a cold close-up as she locks onto him, a diving thrust that drives them both down through the clouds, and concludes with the two of them crashing onto the terrace and landing apart on opposite sides of a smoking crater. The visual style employs 3D CG cinematic realism with PBR materials, volumetric fog, and intense crimson red sword-light effects against dark purple flame. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 6]): fully_preserved - The warrior's face, silver-white hair with bangs and white silk robe with gold embroidery from <Picture 1> remain consistent throughout all shots, together with the specific crimson red energy sword effects.
+<Subject 2> (appears in [Shot 1] through [Shot 6]): fully_preserved - The sea of clouds, the blood-red moon and the temple terrace below from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 6]): weak_reference - The overall visual quality adheres to the defined 3D CG cinematic style with PBR rendering and volumetric lighting.
+<Subject 4> (appears in [Shot 1] through [Shot 6]): fully_preserved - <Subject 4>'s face, topknot, black robe with purple trim and purple-flamed jian from <Picture 3> remain consistent throughout all shots.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic, featuring global illumination, physically-based rendering for satin fabrics and armor, and dynamic volumetric fog. The color palette is dominated by cold whites, silvers, intense crimson red energy effects, dark purple flame and the blood-red moon.
+
+[Shot 1] Wide-angle low angle with a high-altitude rising crane shot, the huge blood-red moon filling the background. <Subject 1> and <Subject 4> are already in the air above the sea of clouds, rushing at each other in one fluid motion, no lingering in mid-air. They pass each other in mid-air three times, blades crashing, each clash throwing a burst of crimson and purple sparks and sending a ring of shockwave rippling outward through the clouds below. Her silver-white hair and white robe stream behind her like a banner, his black robe snapping in the wind, rapid rhythm without drag.
+
+[Shot 2] At 00:01.000, the camera cuts to a tracking shot falling alongside the two fighters in mid-air. <Subject 4> slashes at her in a fast diagonal combo; <Subject 1> twists in the air and deflects each strike with zero lag, sparks streaming upward past the camera. Brief slow-motion as their blades lock face to face in free fall, crimson light and purple flame grinding against each other, cloud mist tearing past them; then the rhythm instantly doubles. She kicks off his blade, flips backward over him and gains height above him.
+
+[Shot 3] At 00:04.000, the camera cuts to a high-angle wide shot looking down past <Subject 1> toward the clouds. She flips crisply and releases a cone-shaped crimson sword qi storm downward at <Subject 4>; he answers with a huge sweeping wave of purple flame. The two energies collide between them and explode in a blinding sphere of red and violet light, blasting a hole through the sea of clouds; far below, debris rains onto the temple terrace in chain explosions, high-frequency camera shake, intense and violent impact.
+
+[Shot 4] At 00:07.000, the camera orbits 360 degrees rapidly around <Subject 1> as she hangs in the air at the top of her arc, then instantly cuts to a facial close-up. Cold close-up locking on her face, her silver hair whipping across her eyes, eyes fixed on <Subject 4> through the drifting smoke below her. Mystical crimson runes unfold in a ring around her blade, and a spiritual impact wave blasts the remaining smoke and cloud mist away from her in every direction.
+
+[Shot 5] At 00:10.000, the camera cuts to a vertical rapid falling shot. <Subject 1> dives at <Subject 4> head first like a crimson arrow, her Tachi thrust forward at supersonic speed, a cone of red light piercing the air ahead of her. He raises his flaming jian crosswise and blocks the thrust at the last instant; the impact drives both of them straight down through the sea of clouds, the clouds parting in a spiral around them, red and purple light flickering inside the vortex.
+
+[Shot 6] At 00:12.000, the camera cuts to a wide low-angle shot on the temple terrace, stable framing. The two fighters crash down onto the stone floor in a single impact, a ring of shattered tiles and dust exploding outward and toppling a broken pillar. Out of the dust they spring apart and land in low crouches on opposite sides of a smoking crater, <Subject 1> on the left with her Tachi glowing crimson, <Subject 4> on the right with his jian burning purple, both staring each other down under the blood-red moon.
+
+overall_soundscape:
+High-frequency combat sound effects throughout. Roaring high-altitude wind and tearing cloud mist. Sharp metallic blade-on-blade clashes ringing in open air. Dense red sword qi whistling and the roar of purple flame, then a huge explosion as the energies collide. A thunderous crash of stone as they land. The soundscape is dominated by high-speed whooshes and deep low-frequency booms.
+
+non_diegetic_music:
+N/A

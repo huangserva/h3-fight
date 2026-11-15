@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the female warrior in <Picture 1>: her facial identity, porcelain skin, silver-white long hair with straight bangs, and ethereal yet lethal demeanor come from <Picture 1>. Her attire consists of a glowing white silk robe with intricate gold embroidery and metallic accents, as shown in <Picture 1>. Her primary weapon is a Tachi (Japanese-style sword) which emits intense crimson red energy effects during combat.
+<Subject 2> is the ruined cliff-top temple terrace in <Picture 2>: the cracked stone floor with carved circular patterns, broken stone pillars, the cracked bronze bell hanging under its wooden frame, the red-pillared temple hall, the red maple tree, the sea of clouds and the huge blood-red moon all come from <Picture 2>. <Subject 4> waits there.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR) for satin fabrics and armor, dynamic volumetric fog, and high-gloss material response.
+<Subject 4> is the rival swordsman in <Picture 3>: his young cold face, long black hair tied in a high topknot, black robe with dark purple trim and torn hem, and the long straight jian wreathed in dark purple flame all come from <Picture 3>.
+
+summary:
+[reference generation] The target video is a 10-second quiet ending of a high-fantasy duel on a ruined cliff-top temple terrace under a blood-red moon. <Subject 4>, the black-robed rival swordsman, kneels disarmed with the same cold, lethal female warrior's Tachi at his throat. She slowly lowers the blade and sheathes it, the crimson light vanishing, then turns and walks away without looking back while his flaming jian remains stuck in the humming bronze bell. The sequence ends with her white figure descending the stone stairway into the sea of clouds as the camera rises away from the terrace. The visual style employs 3D CG cinematic realism with PBR materials and volumetric fog. No more fighting. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 4]): fully_preserved - The warrior's face, silver-white hair with bangs and white silk robe with gold embroidery from <Picture 1> remain consistent throughout all shots.
+<Subject 2> (appears in [Shot 1] through [Shot 4]): fully_preserved - The damaged temple terrace, bronze bell, maple tree, sea of clouds and blood-red moon from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 4]): weak_reference - The overall visual quality adheres to the defined 3D CG cinematic style with PBR rendering and volumetric lighting.
+<Subject 4> (appears in [Shot 1], [Shot 3] and [Shot 4]): fully_preserved - <Subject 4>'s face, topknot, torn black robe with purple trim and purple-flamed jian from <Picture 3> remain consistent.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic, featuring global illumination, physically-based rendering for satin fabrics, and dynamic volumetric fog. The color palette is dominated by cold whites, silvers, the blood-red moon and a dying purple glow. The rhythm is slow, calm and final, the tension draining away.
+
+[Shot 1] Medium two-shot in side profile, stable framing. <Subject 4> kneels on one knee on the cracked stone floor, his black robe torn and smoking, looking up at <Subject 1>. The tip of her Tachi rests at his throat, the blade still glowing faintly crimson. She holds the pose for a long beat, completely still, the wind moving only her silver hair and the hem of her white silk robe. Then she slowly lowers the blade away from his throat. He lets out a long breath, his shoulders dropping. Smoke and dust drift slowly between them.
+
+[Shot 2] At 00:03.000, the camera cuts to a close-up of her hands and the Tachi. She flicks the blade once to the side, the last crimson light scattering off the edge like drifting embers, then slides the Tachi slowly back into its scabbard. The guard meets the scabbard with a soft, clean click and the red glow is gone. Her fingers rest on the hilt for a moment before letting go, a maple leaf landing on the scabbard and sliding off.
+
+[Shot 3] At 00:06.000, the camera cuts to a wide shot from behind <Subject 4>, who kneels out of focus in the foreground. <Subject 1> turns and walks away across the damaged terrace toward the stone stairway at the cliff edge, not looking back, her steps calm and even. His jian is still stuck in the bronze bell on the left side of the frame, its purple flame slowly dying down to a faint glow, the bell still trembling and humming softly. Leaves drift down across the frame.
+
+[Shot 4] At 00:08.000, the camera cuts to an extreme wide rising crane shot pulling away from the cliff top. <Subject 1> descends the long stone stairway into the sea of clouds, her small white figure disappearing step by step into the fog. The temple terrace, the kneeling <Subject 4> and the bronze bell grow small below as the camera rises toward the huge blood-red moon. Fog rolls over the cliff edge and maple leaves drift across the moon. Stable, slow ending.
+
+overall_soundscape:
+Gentle high-altitude wind and rustling maple leaves. A soft metallic ring as the blade is flicked, then the clean click of the Tachi sliding home into its scabbard. Calm, even footsteps on stone. The fading hum of the bronze bell and the faint crackle of dying flame. Quiet, final atmosphere with no combat sounds.
+
+non_diegetic_music:
+N/A

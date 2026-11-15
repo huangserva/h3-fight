@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the male warrior whose facial identity, sharp jawline, long black hair tied in a high ponytail, and calm yet ferocious demeanor come from the visual description. His attire consists of a dark navy armored robe with silver scale plates and a flowing white inner sash. His primary weapon is a long silver spear which emits intense icy azure frost energy during combat.
+<Subject 2> is the high-fantasy environment: a snow-covered ancient mountain temple courtyard with broken stone lanterns, frozen pine trees, heavy falling snow and a pale moon behind drifting clouds.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR) for metal armor and silk, dynamic volumetric fog and snow.
+
+summary:
+[reference generation] The target video is a 10-second high-fantasy battle sequence featuring a black-haired spear warrior in navy armor fighting a squad of armored demon soldiers in a snowy mountain temple. The sequence progresses from a explosive charge to rapid spear thrusts, a spinning sweep, an aerial plunge that freezes the ground, and ends with a cold stare. Intense icy azure spear-light effects. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 5]): fully_preserved - The warrior's face, ponytail, navy armored robe and azure frost spear effects remain consistent.
+<Subject 2> (appears in [Shot 1] through [Shot 5]): fully_preserved - The snowy temple courtyard keeps consistent lighting, snowfall and fog.
+<Subject 3> (appears in [Shot 1] through [Shot 5]): weak_reference - The overall visual quality adheres to the defined style.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic. The color palette is dominated by deep navy, silver, white snow and intense icy azure energy.
+
+[Shot 1] Extreme low-angle close-up of <Subject 1> gripping the spear. Within the first second he bursts forward into a supersonic charge across the courtyard; snow and stone fragments explode behind his feet, his ponytail and sash snap straight back in the wind.
+
+[Shot 2] At 00:01.500, dynamic tracking shot. Three armored demon soldiers attack with axes; he parries the first with the spear shaft, then delivers three ultra-fast thrusts that leave a net of azure light, shattering armor plates into glittering ice shards.
+
+[Shot 3] At 00:04.000, wide low-angle crane shot. He plants the spear and vaults into the air, spins the spear in a full circle, and drives it down into the ground; a ring of frost energy explodes outward, freezing the soldiers in place and cracking the flagstones.
+
+[Shot 4] At 00:06.500, the camera orbits rapidly around him and cuts to a facial close-up; snowflakes pass in front of his cold eyes as azure light reflects on his face.
+
+[Shot 5] At 00:08.500, slow pull-back wide shot. The frozen soldiers shatter into ice fragments behind him; he lands, swings the spear to his side, and raises his eyes toward the dark temple gate.
+
+overall_soundscape:
+High-frequency combat sounds. Sharp metal clashes, spear whooshes, cracking ice, exploding frost and howling wind.
+
+non_diegetic_music:
+N/A

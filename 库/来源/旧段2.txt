@@ -1,0 +1,31 @@
+subject_definitions:
+<Subject 1> is the female warrior in <Picture 1>: her facial identity, porcelain skin, silver-white long hair with straight bangs, and ethereal yet lethal demeanor come from <Picture 1>. Her attire consists of a glowing white silk robe with intricate gold embroidery and metallic accents, as shown in <Picture 1>. Her primary weapon is a Tachi (Japanese-style sword) which emits intense crimson red energy effects during combat.
+<Subject 2> is the ruined cliff-top temple terrace in <Picture 2>: the cracked stone floor with carved circular patterns, broken stone pillars, the cracked bronze bell hanging under its wooden frame, the red-pillared temple hall, the red maple tree, the sea of clouds and the huge blood-red moon all come from <Picture 2>. <Subject 4> waits there.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR) for satin fabrics and armor, dynamic volumetric fog, and high-gloss material response.
+<Subject 4> is the rival swordsman in <Picture 3>: his young cold face, long black hair tied in a high topknot, black robe with dark purple trim and torn hem, and the long straight jian wreathed in dark purple flame all come from <Picture 3>.
+
+summary:
+[reference generation] The target video is a 10-second tense standoff before a high-fantasy duel on a ruined cliff-top temple terrace under a blood-red moon. <Subject 4>, the black-robed rival swordsman, slowly turns to face the same cold, lethal female warrior with silver-white hair and a white silk robe, and draws his long jian, which ignites in dark purple flame. She lowers into a drawing stance with her hand on the hilt of her Tachi, crimson light leaking from the scabbard. The sequence ends with both of them sinking into charging stances at the same instant as a gust tears maple leaves between them, freezing on the moment before the clash. The visual style employs 3D CG cinematic realism with PBR materials and volumetric fog. No fighting yet. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1], [Shot 3] and [Shot 4]): fully_preserved - The warrior's face, silver-white hair with bangs and white silk robe with gold embroidery from <Picture 1> remain consistent throughout all shots.
+<Subject 2> (appears in [Shot 1] through [Shot 4]): fully_preserved - The temple terrace, bronze bell, maple tree, sea of clouds and blood-red moon from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 4]): weak_reference - The overall visual quality adheres to the defined 3D CG cinematic style with PBR rendering and volumetric lighting.
+<Subject 4> (appears in [Shot 1], [Shot 2] and [Shot 4]): fully_preserved - <Subject 4>'s face, topknot, black robe with purple trim and purple-flamed jian from <Picture 3> remain consistent throughout all shots.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic, featuring global illumination, physically-based rendering for satin fabrics, and dynamic volumetric fog. The color palette is dominated by cold whites, silvers, the blood-red moon, a slowly rising crimson glow on her side and dark purple flame on his side. The rhythm is slow and taut, every movement deliberate.
+
+[Shot 1] Medium shot from behind <Subject 1>'s shoulder, looking across the terrace at <Subject 4> beneath the bronze bell. He slowly turns around to face her, his black robe with dark purple trim and torn hem swinging with the turn, his long black hair tied in a high topknot. His young cold face is revealed in the red moonlight, his eyes fixed on her. He reaches across his body and grips the hilt of his long straight jian. Fog drifts at knee height across the stone floor between them, and the maple tree behind him sheds a slow stream of red leaves. Slow, heavy rhythm.
+
+[Shot 2] At 00:03.000, the camera cuts to a close-up tracking along the blade as <Subject 4> slowly draws the jian from its scabbard. Dark purple flame crawls up the steel inch by inch and roars to life along the whole blade, lighting his face from below in violet. The heat makes the air ripple, and drifting maple leaves curl and burn into embers as they pass near the blade. He lowers the flaming jian to his side, its tip almost touching the stone, scorching a dark line into the floor as he takes one step forward.
+
+[Shot 3] At 00:06.000, the camera cuts to a facial close-up of <Subject 1>. Cold close-up locking on her face, her eyes narrowing slightly as the purple light reflects in them. Her right hand slides onto the hilt of her Tachi and she shifts her weight into a low drawing stance. A sudden gust blows her silver-white hair and the white silk robe sideways, and crimson light begins to leak from the mouth of the scabbard, glowing brighter with every heartbeat.
+
+[Shot 4] At 00:08.000, the camera cuts to a low-angle wide shot at floor level, the cracked stone floor in the foreground. <Subject 1> and <Subject 4> sink into charging stances at the same instant. A violent gust tears a whirlwind of maple leaves through the space between them, the bronze bell sways on its frame, and the stone beneath their feet cracks in two small rings of dust. Crimson light and purple flame flare at the same moment. The camera freezes on the instant before the charge.
+
+overall_soundscape:
+Howling high-altitude wind and rustling maple leaves. The slow metallic scrape of a jian being drawn, followed by the roar of purple flame igniting. Leaves crackling into embers. A low creak from the swaying bronze bell. Stone cracking softly under their feet. Tense, quiet atmosphere with no clashes yet.
+
+non_diegetic_music:
+N/A
