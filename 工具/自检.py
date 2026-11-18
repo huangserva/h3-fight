@@ -50,8 +50,8 @@ except Exception as e:
 文件 = []
 模板 = [m for m in ('三参考图.json', '无参考图.json') if os.path.exists(os.path.join(库, '模板', m))]
 if not 模板:
-    报(False, '库/模板/ 里还没有工作流（三参考图.json / 无参考图.json）', '照 docs/工作流怎么搭.md 在 ComfyUI 里搭好工作流，用“导出（API）”存进 库/模板/')
-    print('  先按 docs/工作流怎么搭.md 的节点清单核对插件；模型文件等工作流搭好后再查')
+    报(False, '库/模板/ 里还没有工作流（三参考图.json / 无参考图.json）', '跑 python3 工具/建模板.py 生成两个工作流模板（想自己搭就照 docs/工作流怎么搭.md，用“导出（API）”存进 库/模板/）')
+    print('  先核对插件；模型文件等模板有了再查')
     节点 |= {'MiniMaxH3ReferenceToVideo', 'MiniMaxH3AudioConditioningT8', 'MiniMaxH3AVDecodeT8', 'SelfLiftAvatarH3TST', 'SelfLiftAvatarH3Sampler',
            'H3SigmaRefiner', 'ResolutionSelector', 'LoraLoaderBypassModelOnly', 'LoraLoaderModelOnly', 'UNETLoader', 'CLIPLoader', 'VAELoader',
            'KSamplerSelect', 'BasicScheduler', 'ConditioningZeroOut', 'CreateVideo', 'SaveVideo', 'LoadImage'}

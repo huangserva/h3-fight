@@ -21,7 +21,7 @@ A method for writing H3 fight prompts, in three layers:
 | Layer | Contents | Requirements |
 |---|---|---|
 | **Core: writing prompts** | Shot-block library (378 blocks), phrase parts, move table, pitfall table, the six-section prompt format, `检查.py` (checker), `查重复.py` (repetition check). Big-motion sports such as skiing are covered in [运动.md](运动.md) | Python 3.9+ only. **No GPU needed** |
-| Optional: rendering | How to build the workflow ([工作流怎么搭](docs/工作流怎么搭.md)) plus `出片.py`, which runs check → submit → wait → download → contact sheet → subtitle check | A ComfyUI that runs MiniMax H3 |
+| Optional: rendering | `建模板.py` (generates the workflow; see [工作流怎么搭](docs/工作流怎么搭.md)) plus `出片.py`, which runs check → submit → wait → download → contact sheet → subtitle check | A ComfyUI that runs MiniMax H3 |
 | Optional: ad post-production | Described in [广告后期.md](广告后期.md): `放大_flashvsr.py` (upscale to 2560×1440), `配乐能量.py` (find the heavy beats in a music track to cut it to the picture), `广告合成.py` (voice-over, brand end card, mix, loudness) | ffmpeg and Pillow. Upscaling also needs FlashVSR_Plus and a GPU. Read [Commercial use](#commercial-use) first |
 | Not included | Reference images (character sheets) | Any image tool. Only the method is written down: [reference images](docs/参考图怎么出.md). For upscaling without FlashVSR, see [upscaling (optional)](docs/放大（可选）.md) |
 
@@ -111,7 +111,13 @@ The three fight LoRAs are not redistributed here. Download them from the author'
 
 ### Build the workflow
 
-The repository **does not ship workflow files**, only instructions. Build the workflow in ComfyUI following [docs/工作流怎么搭.md](docs/工作流怎么搭.md) (about 20 nodes; the node and parameter names in that document are the ComfyUI names). Then use Export (API) to save it as `库/模板/三参考图.json` (with reference images) and `库/模板/无参考图.json` (prompt only). Node IDs don't matter: `出片.py` finds nodes by role and fills in the number of reference images, the first-frame guide, the seed and the output name.
+The repository **does not ship workflow files**; one command generates them:
+
+```bash
+python3 工具/建模板.py      # writes 库/模板/三参考图.json (with reference images) and 无参考图.json (prompt only)
+```
+
+It assembles the roughly 20-node workflow from the table in [docs/工作流怎么搭.md](docs/工作流怎么搭.md) and asks your ComfyUI which model files it actually has, so the file names are filled in for you (if ComfyUI is unreachable it uses the names from the model list above). Existing templates are left alone; pass `--覆盖` to rebuild. You can still build the workflow by hand in ComfyUI following that document (the node and parameter names in it are the ComfyUI names) and save it with Export (API) under the same file names. Node IDs don't matter: `出片.py` finds nodes by role and fills in the number of reference images, the first-frame guide, the seed and the output name.
 
 Then run `python3 工具/自检.py`. It checks every node and model file against ComfyUI's `/object_info`.
 
