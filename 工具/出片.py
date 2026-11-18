@@ -4,6 +4,7 @@
 #        [--题材 运动]     滑雪等大动作运动：检查按运动门槛（不要求打戏招牌写法），不通过照样不提交。部件不换（打戏 LoRA 对滑雪也稳人和器材）。
 #        [--非打斗 "理由"]  变身、登场、收刀这类不是打斗的衔接段：检查只打印不拦，理由记进提交记录。部件照旧不换。
 #        [--只导出]        只生成 ComfyUI 工作流 JSON（API 格式），不提交；可以自己拖进 ComfyUI 或用别的方式跑。
+#        [--旧时间表]      重出库里照 15 秒排的旧 6 镜来源时加：新提示词按 15 秒排是错误，加了降成提醒。
 #        [--最多等 120]    提交后最多等多少分钟（默认 120；0 = 一直等）。队列里排了很多段时加大。
 # --名字 会变成文件名和远程路径的一部分，只能用字母、数字、汉字、下划线、连字符和点。
 # 先跑 检查.py，不通过就停（不提交）。有参考图用 库/模板/三参考图.json，没有用 库/模板/无参考图.json。
@@ -25,13 +26,13 @@ C = 配置(); 子目录 = C.get('output_subfolder', 'h3_fight'); 连 = Comfy(C)
 a = argparse.ArgumentParser(); a.add_argument('提示词'); a.add_argument('--名字', required=True); a.add_argument('--输出', required=True)
 a.add_argument('--参考图', nargs='+'); a.add_argument('--首帧'); a.add_argument('--种子', type=int, default=1); a.add_argument('--不等', action='store_true')
 a.add_argument('--加参考图', nargs='+', default=[]); a.add_argument('--非打斗'); a.add_argument('--题材', default='打戏', choices=['打戏', '运动']); a.add_argument('--只导出', action='store_true')
-a.add_argument('--最多等', type=float, default=120)
+a.add_argument('--最多等', type=float, default=120); a.add_argument('--旧时间表', action='store_true')
 o = a.parse_args()
 if not re.fullmatch(r'[\w.\-]+', o.名字):
     sys.exit(f'--名字 只能用字母、数字、汉字、下划线、连字符和点，不能有空格、引号、斜杠：{o.名字!r}')
 os.makedirs(o.输出, exist_ok=True)
 
-错, 醒, 数 = 查(o.提示词, 题材=o.题材)
+错, 醒, 数 = 查(o.提示词, 题材=o.题材, 旧时间表=o.旧时间表)
 print(f'检查（{o.题材}）：', '通过' if not 错 else '不通过', 数)
 for x in 错 + 醒: print('  ', x)
 if 错 and not o.非打斗: sys.exit('检查不通过，没有提交。先改提示词。')

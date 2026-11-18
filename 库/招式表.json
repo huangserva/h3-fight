@@ -1,5 +1,5 @@
 {
- "_说明": "打法种类表。多段片子每段选一个“主打法”，相邻段不重复，整片至少用 6 类。工具/查重复.py 用这里的“认”正则数每段用了哪些。“写法”是可以整句搬进镜头的英文，<A> 出招的人、<B> 挨打的人。来由：2D 日漫测试 A 五段只用到 拳、腿、格挡、气功波、冲撞、空中追击 这几类，每段还是同一个节拍顺序，看片都说单一。另一种单一是“节拍单一”：每段都照作者六镜头顺序（对冲→快打→三连→特写→垂直下坠硬接→拉远收尾），五段就是同一个节奏放五遍。单段保留六镜头节奏，但第 1、3、5 镜在各段之间要换打法。已验证：日漫测试 C 就是按这张表每段换主打法写的，看片评价“动作非常完美”。注意按词数算会高估“拳脚连打”（伸缩拳的招全带 punch），这条提醒看实际镜头再判断。",
+ "_说明": "打法种类表。多段片子每段选一个“主打法”，相邻段不重复，整片至少用 6 类。工具/查重复.py 用这里的“认”正则数每段用了哪些。“写法”是可以整句搬进镜头的英文，<A> 出招的人、<B> 挨打的人。来由：2D 日漫测试 A 五段只用到 拳、腿、格挡、气功波、冲撞、空中追击 这几类，每段还是同一个节拍顺序，看片都说单一。另一种单一是“节拍单一”：每段都照作者六镜头顺序（对冲→快打→三连→特写→垂直下坠硬接→拉远收尾），五段就是同一个节奏放五遍。单段保留六镜头节奏，但第 1、3、5 镜在各段之间要换打法。已验证：日漫测试 C 就是按这张表每段换主打法写的，看片评价“动作非常完美”。注意按词数算会高估“拳脚连打”（伸缩拳的招全带 punch），这条提醒看实际镜头再判断。 兵器戏（11-18 补）：刀剑硬接、锁刀角力、击落缴械、后仰残影闪避、腾空下劈、兵器连斩 这几类是照 k3f、k4f 的写法补的；带“主兵器”标记的类（射箭、刀剑硬接）是这种兵器每个回合都会有的动作，查重复.py 不拿它算“某类太多”。带“要兵器”标记的类只在写到兵器的镜头里才数（徒手戏的 overhead strike 不算腾空下劈）。整段大半镜头都在用兵器时，查重复.py 不查近身手部细分。",
  "类": [
   {
    "名": "拳脚连打",
@@ -89,7 +89,8 @@
    "名": "射箭",
    "认": "\\b(long)?bows?\\b|\\b(fires?|shoots?|looses?|nocks?|releases?) [a-z' ]{0,25}arrows?\\b|\\barrows? (strikes?|hits?|pierces?|streaks?|slams?)|(storm|rain|volley) of [a-z ]*arrows",
    "写法": "still running, <A> turns at the waist and looses three arrows in rapid succession at supersonic speed, each a streak of green wind that strikes <B>'s armor in a burst of sparks",
-   "适合": "远程兵器（弓、弩、飞刀）。边跑边回身射、腾空箭雨、贴身连射、最后一箭射穿要害（浮桥追逐，11-16 人工“特别优秀”）"
+   "适合": "远程兵器（弓、弩、飞刀）。边跑边回身射、腾空箭雨、贴身连射、最后一箭射穿要害（浮桥追逐，11-16 人工“特别优秀”）",
+   "主兵器": true
   },
   {
    "名": "追逐",
@@ -138,6 +139,48 @@
    "认": "turning thrust|turns? (his|her) back as if|spins and whips the (spear|staff|sword|sabre|blade)|knocks? the [a-z ]{0,12}helmet",
    "写法": "<A> turns his back as if to step away, then spins and whips the spear back around in one turning thrust; brief slow-motion as the spearhead streaks over <B>'s head and knocks the helmet clean off",
    "适合": "回马枪、回身剑一类的诈败反击，做收尾一招。挑盔、挑冠、挑发带都行，别直取要害（石窟第 6 段镜 5 验证过）"
+  },
+  {
+   "名": "刀剑硬接",
+   "认": "hard-blocks?|catch(es)? (it|the cut|the slash|the blow|the strike) on (his|her)|edge (to|against) edge|blade against blade|meets? it (edge|blade)",
+   "写法": "<B> hard-blocks it with her blade raised level above her head, edge grinding against edge in a shower of sparks, instantly dissipates the force and throws <A> back",
+   "适合": "兵器戏的基本回合：写明兵器架在哪、两把兵器在两人之间相碰。一段里别每个回合都是它",
+   "主兵器": true,
+   "要兵器": true
+  },
+  {
+   "名": "锁刀角力",
+   "认": "blades? (stay |are |stays? )?lock|lock(ed|s)? (blades|together|and grind)|crossed (in an x|and locked)|weapons lock|grind(s|ing)? (against each other|face to face)",
+   "写法": "their blades lock between them, crimson light and purple flame grinding against each other, sparks exploding",
+   "适合": "段落之间的接缝（上一段停在锁刀特写，下一段从锁刀接）；一段最多一次",
+   "要兵器": true
+  },
+  {
+   "名": "击落缴械",
+   "认": "out of (his|her) (hand|grip|hands)|beats? (his|her) [a-z]+ down|knock(s|ing)? (the|his|her) [a-z]+ (out|away|from)|lying out of (his|her|their) reach|disarm",
+   "写法": "<A> spins and strikes his blade near the hilt, knocking the jian out of his hand; it spins through the air and stabs into the stone floor far behind him",
+   "适合": "留手的结局：打飞兵器、刀垂身侧，不会被画成刺中",
+   "要兵器": true
+  },
+  {
+   "名": "后仰残影闪避",
+   "认": "bends? (backward|back) under|(cuts|hits|strikes|sweeps through) only (her|his|an) afterimage|only (cuts|hits|strikes) (her|his|an) afterimage|ducks? under (it|the)|leaps? over (it|the)|vaults? over (the|its|his|her)|rolls? aside",
+   "写法": "<B> bends backward under it, the flame wave sweeping over her, then springs upright in one fluid motion",
+   "适合": "对付横扫；比“朝人直刺再让开”稳，兵器不会画到人身上"
+  },
+  {
+   "名": "腾空下劈",
+   "认": "overhead (strike|chop|cut)|(leaps?|vaults?|springs?) [a-z ,'-]{0,60}(brings?|drives?|chops?|cuts?) [a-z ,'-]{0,40}down|spinning cut|from the top of (his|her) arc",
+   "写法": "<A> leaps and brings the blade down in an overhead strike; <B> hard-blocks it, the ground cracking in radiating lines beneath her feet",
+   "适合": "一段里的重击；接“硬接后地面开裂”",
+   "要兵器": true
+  },
+  {
+   "名": "兵器连斩",
+   "认": "three (ultra-high-speed |rapid )?(strikes|slashes|cuts)|flurry of [a-z ]*(slashes|cuts|chops)|(horizontal slash|upward thrust|spinning cut)[a-z ,]{0,30}(upward thrust|spinning cut)",
+   "写法": "<A> answers with three ultra-high-speed strikes, each one shown clearly: a horizontal slash, an upward thrust, a spinning cut, each one striking his jian and leaving a sharp scarlet arc hanging in the air",
+   "适合": "压制对手；每一下写清打在对方兵器上",
+   "要兵器": true
   }
  ],
  "近身细分_说明": "近身手部对打的细分。日漫测试 A 的近身镜头写的都是笼统词：trade punches and kicks at blinding speed、a furious close-range combo、a frantic flurry of punches and kicks、fists crashing together，H3 就画成同一种你一拳我一拳，看片说“像早年的老动画”。写法：每个近身镜头写 ≥ 3 个具体回合，每个回合写成“<A> 出什么招 → <B> 怎么接/怎么挨”，回合之间换招式、换部位（头/腹/腿/手腕）、换方向；每一下挨打要有看得见的反应（头被打偏、身体对折、被推得滑出去）。整片至少用 6 种细分，同一种最多用 2 次；“对拳互抵”最容易用烂，整片最多 1 次。工具/查重复.py 会数。",

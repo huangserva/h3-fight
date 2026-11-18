@@ -1,10 +1,16 @@
 # 多段打戏查“动作单一”：数每段每个镜头用了哪几类打法（库/招式表.json），看整片有多少类、哪类用太多、各段节拍是不是一样。
 # 用法：python3 查重复.py s1.txt s2.txt s3.txt ...   只提醒，不拦。
+# 兵器戏（大半镜头里人手里有兵器）不查近身手部细分；招式表里带“主兵器”的类（射箭、刀剑硬接）不算“某类太多”。
 import json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from 共用 import 读, 镜头, 库
 表 = json.load(open(os.path.join(库, '招式表.json'), encoding='utf-8'))
 类 = 表['类']; 细分 = 表.get('近身细分', [])
+兵器 = r"\b(sword|blade|tachi|jian|sabre|saber|katana|dagger|spear|staff|axe|fan|bow|arrow|halberd|glaive|mace|scythe)s?\b|\b(the|his|her|steel|section) whip\b"   # hammer、whip 常当动词用（hammers down、whips around），不算
+# 这些词里的 kick / knee / fist / elbow 不是招：蹬地借力、单膝跪地、巨人的石拳（那是它的身体）、肘关节
+不是招 = r"kick(s|ed|ing)? off|(on|to|onto) (one|his|her|both) knees?|elbow joint|stone fists?"
+主兵器 = {k['名'] for k in 类 if k.get('主兵器')}
+兵器镜 = 总镜 = 0
 笼统 = r"trade[sd]? (punches|blows)|exchange[sd]? (punches|blows)|flurry of (punches|blows)|punches and kicks at|(furious|fast|rapid) (close-range )?combo|barrage of (punches|blows)|rain(s)? (of )?(punches|blows)"
 细总 = collections.Counter(); 笼统镜 = []
 总 = collections.Counter(); 段主 = []; 段类 = []; 段拍 = []
@@ -13,8 +19,10 @@ for f in sys.argv[1:]:
     c = collections.Counter(); 拍 = []
     for n, s in 镜头(读(f)):
         拍.append('/'.join(a for a, r in 标志 if re.search(r, s.lower())) or '-')
+        有兵器 = bool(re.search(兵器, s.lower())); 总镜 += 1; 兵器镜 += 有兵器
+        净 = re.sub(不是招, ' ', s.lower())
         for k in 类:
-            if re.search(k['认'], s.lower()): c[k['名']] += 1
+            if (有兵器 or not k.get('要兵器')) and re.search(k['认'], 净): c[k['名']] += 1
         细 = [k['名'] for k in 细分 if re.search(k['认'], s.lower())]
         细总.update(细)
         if re.search(笼统, s.lower()) and len(细) < 2: 笼统镜.append(f'{os.path.basename(f)} 第 {n} 镜')
@@ -23,14 +31,16 @@ for f in sys.argv[1:]:
 醒 = []
 全 = sum(总.values()) or 1
 if len(总) < 6: 醒.append(f'整片只用了 {len(总)} 类打法，要 ≥ 6')
-for k, v in 总.most_common(2):
+for k, v in [x for x in 总.most_common() if x[0] not in 主兵器][:2]:
     if v / 全 > 0.25: 醒.append(f'“{k}”占 {v * 100 // 全}%，太多（≤ 25%）')
 for i in range(1, len(段主)):
     if 段主[i][:2] == 段主[i - 1][:2]: 醒.append(f'第 {i} 段和第 {i + 1} 段主打法一样：{"、".join(段主[i][:2])}')
 位 = collections.Counter((i, a) for 拍 in 段拍 for i, x in enumerate(拍) for a in x.split('/') if a not in ('-', '特写', '拉远'))
 for (i, a), v in sorted(位.items()):
     if len(段拍) >= 3 and v / len(段拍) >= 0.6: 醒.append(f'{v}/{len(段拍)} 段的第 {i + 1} 镜都是“{a}”，节拍重复：这个位置在各段之间换打法（见 招式表.json）')
-if 细分:
+兵器戏 = 总镜 and 兵器镜 / 总镜 > 0.5
+if 兵器戏: print(f'兵器戏（{兵器镜}/{总镜} 个镜头有兵器）：不查近身手部细分')
+if 细分 and not 兵器戏:
     print('近身细分：', '、'.join(f'{k}×{v}' for k, v in 细总.most_common()) or '无')
     if len(细总) < 6: 醒.append(f'近身手部对打只用了 {len(细总)} 种细分，要 ≥ 6（见 招式表.json 近身细分）')
     for k, v in 细总.items():

@@ -279,7 +279,7 @@ class 整条命令(unittest.TestCase):
         self.出 = os.path.join(self.临, 'out')
 
     def 跑(self, *参, 环境=None):
-        return subprocess.run([sys.executable, os.path.join(self.临, '工具', '出片.py'), os.path.join(self.临, '库', '来源', 'k4d.txt'), '--输出', self.出, *参],
+        return subprocess.run([sys.executable, os.path.join(self.临, '工具', '出片.py'), os.path.join(self.临, '库', '来源', 'k4f.txt'), '--输出', self.出, *参],
                               capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=120, env={**os.environ, 'PYTHONIOENCODING': 'utf-8', **(环境 or {})})
 
     @unittest.skipUnless(能演ssh, 'ssh 模式的测试要 sh 和 curl')
@@ -306,7 +306,7 @@ class 整条命令(unittest.TestCase):
         self.assertEqual(len(self.假.提交), 1)
         流 = self.假.提交[0]['prompt']
         self.assertEqual(流['9']['inputs']['filename_prefix'], 'h3_fight/测试段1'); self.assertEqual(流['3']['inputs']['seed'], 7)
-        self.assertEqual(流['1']['inputs']['prompt'], open(os.path.join(根, '库', '来源', 'k4d.txt'), encoding='utf-8').read())
+        self.assertEqual(流['1']['inputs']['prompt'], open(os.path.join(根, '库', '来源', 'k4f.txt'), encoding='utf-8').read())
         self.assertIn('测试段1', open(os.path.join(self.出, '提交记录.txt'), encoding='utf-8').read())
 
     def test_校验失败_马上停_说清原因(self):
