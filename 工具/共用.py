@@ -27,6 +27,16 @@ def 镜头(text):
     """返回 [(镜头号, 文字)]，文字不含 [Shot n] 标签。"""
     return [(int(m.group(1)), m.group(2).strip()) for m in re.finditer(r'^\[Shot (\d+)\]\s*(.*)$', text, re.M)]
 
+def 时间表(text):
+    """这条提示词的镜头是按几秒排的：返回（镜头数, 每镜从第几秒开始, '10 秒' 或 '15 秒'）。
+    有镜头 9 秒以后才开始，就是照 15 秒片排的旧时间表（0、1、4、7、10、12 秒）：H3 只出 10 秒，最后两镜会被挤成各 1 秒
+    （见踩坑“10 秒片写成 15 秒的镜头时间”，它的检测正则认的是同一件事）。第 1 镜总是从 0 秒开始（它里面写的时间点是镜头中途的）。"""
+    点 = []
+    for i, (_, s) in enumerate(镜头(text)):
+        m = re.search(r'At (\d\d):(\d\d(?:\.\d+)?)', s)
+        点.append(0.0 if i == 0 else int(m.group(1)) * 60 + float(m.group(2)) if m else None)
+    return len(点), 点, '15 秒' if any(t is not None and t >= 9 for t in 点) else '10 秒'
+
 # 运动题材（滑雪等）补充的五样词：只在 题材=运动 时加进去，打戏的认法不变。
 运动五样 = {
  '招式': r"tuck|carv|turn|takeoff|takes off|pops?\b|backflip|front ?flip|rotat|lands?\b|touches down|slams down|straight-lines|accelerat|rides? (up|away|out)|hockey stop",

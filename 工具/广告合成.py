@@ -5,7 +5,8 @@
 #   旁白时间是成片里的秒数；“尾+1.45”= 结尾黑场开始后 1.45 秒（口号浮现时）。配乐要先剪好、从 0 秒对齐画面（见 广告后期.md）。
 # 结尾：画面最后 --叠 秒渐黑接黑场，品牌大字 0.4 秒起浮现、口号 1.4 秒起浮现，共 --结尾秒 秒。
 # 旁白后期（默认开）：去头尾静音 → 降 2 个半音（时长不变）→ 低频加厚 → 压缩 → 一点空间感；配乐在旁白时自动压低。
-import argparse, json, os, subprocess, tempfile
+# 结尾字的字体：--字体 不写就按系统找一个细体无衬线字体（macOS / Windows / Linux）；品牌名是中文时要用 --字体 指定中文字体。
+import argparse, json, os, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFont
 
 a = argparse.ArgumentParser()
@@ -14,10 +15,23 @@ a.add_argument('--品牌', required=True); a.add_argument('--口号', default=''
 a.add_argument('--旁白', nargs='*', default=[]); a.add_argument('--配乐')
 a.add_argument('--配乐音量', type=float, default=-5); a.add_argument('--环境声', type=float, default=-12, help='原片声音压低多少 dB；写 -99 就不要')
 a.add_argument('--结尾秒', type=float, default=4.5); a.add_argument('--叠', type=float, default=0.6)
-a.add_argument('--字体', default='/System/Library/Fonts/HelveticaNeue.ttc'); a.add_argument('--字重', type=int, default=7, help='ttc 里的序号，HelveticaNeue 7 = Light')
+a.add_argument('--字体', default='', help='字体文件（ttf / otf / ttc）；不写就按系统找')
+a.add_argument('--字重', type=int, help='ttc 里的序号；不写时 HelveticaNeue 用 7（Light），其他字体用 0')
 a.add_argument('--降调', type=float, default=2, help='旁白降几个半音，0 = 不处理')
 a.add_argument('--响度', type=float, default=-14)
 o = a.parse_args()
+
+默认字体 = [('/System/Library/Fonts/HelveticaNeue.ttc', 7),                                                    # macOS：Helvetica Neue Light
+        ('C:/Windows/Fonts/segoeuil.ttf', 0), ('C:/Windows/Fonts/arial.ttf', 0),                              # Windows：Segoe UI Light、Arial
+        ('/usr/share/fonts/truetype/dejavu/DejaVuSans-ExtraLight.ttf', 0), ('/usr/share/fonts/truetype/noto/NotoSans-Light.ttf', 0),
+        ('/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf', 0), ('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 0),   # Debian / Ubuntu
+        ('/usr/share/fonts/dejavu-sans-fonts/DejaVuSans.ttf', 0), ('/usr/share/fonts/TTF/DejaVuSans.ttf', 0)]  # Fedora、Arch
+if o.字体: 字体文件, 字重 = o.字体, o.字重 if o.字重 is not None else (7 if os.path.basename(o.字体) == 'HelveticaNeue.ttc' else 0)
+else:
+    字体文件, 字重 = next(((p, o.字重 if o.字重 is not None else i) for p, i in 默认字体 if os.path.exists(p)), (None, 0))
+    if not 字体文件: sys.exit('这台机器上找不到默认字体：用 --字体 指定一个字体文件（ttf / otf / ttc），例如 --字体 /path/to/Font-Light.ttf')
+try: ImageFont.truetype(字体文件, 20, index=字重)   # 先试一下，免得跑到一半才发现字体打不开
+except OSError as e: sys.exit(f'字体打不开：{字体文件}（序号 {字重}）：{e}。用 --字体 换一个字体文件；ttc 里第几个字重用 --字重 指定')
 
 探 = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height,r_frame_rate:format=duration', '-of', 'json', o.画面]))
 W, H = 探['streams'][0]['width'], 探['streams'][0]['height']; fps = round(eval(探['streams'][0]['r_frame_rate']))
@@ -27,7 +41,7 @@ W, H = 探['streams'][0]['width'], 探['streams'][0]['height']; fps = round(eval
 
 # 1. 结尾字（透明图层），字距拉宽，居中
 def 字层(文字, 字号, 字距, 颜色, 中心y, 名):
-    f = ImageFont.truetype(o.字体, 字号, index=o.字重); im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    f = ImageFont.truetype(字体文件, 字号, index=字重); im = Image.new('RGBA', (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
     宽 = [d.textlength(c, font=f) for c in 文字]; 总 = sum(宽) + 字距 * 字号 * (len(文字) - 1)
     升, 降 = f.getmetrics(); x = (W - 总) / 2; y = 中心y - (升 + 降) / 2
     for c, w in zip(文字, 宽): d.text((x, y), c, font=f, fill=颜色); x += w + 字距 * 字号

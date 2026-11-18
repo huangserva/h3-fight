@@ -18,9 +18,10 @@
 
 | 层 | 内容 | 需要什么 |
 |---|---|---|
-| **核心：写提示词** | 镜头块库（188 块）、词句零件、招式表、踩坑表、六段式写法、`检查.py`、`查重复.py` | 只要 Python 3.8+，**不用显卡** |
+| **核心：写提示词** | 镜头块库（378 块）、词句零件、招式表、踩坑表、六段式写法、`检查.py`、`查重复.py`；滑雪这类运动大动作的写法见 [运动.md](运动.md) | 只要 Python 3.9+，**不用显卡** |
 | 可选：出片 | 工作流搭法（[工作流怎么搭](docs/工作流怎么搭.md)）+ `出片.py`（检查 → 提交 → 等待 → 下载 → 拼图 → 查字幕） | 能跑 MiniMax H3 的 ComfyUI |
-| 不包含 | 出参考图（定妆图）、视频放大 | 任何出图 / 超分工具；只写了做法：[参考图怎么出](docs/参考图怎么出.md)、[放大（可选）](docs/放大（可选）.md) |
+| 可选：广告后期 | 做法见 [广告后期.md](广告后期.md)：`放大_flashvsr.py`（放大到 2560×1440）、`配乐能量.py`（找配乐的重拍来对画面）、`广告合成.py`（旁白、品牌结尾、混音、响度） | ffmpeg、Pillow；放大还要 FlashVSR_Plus 和显卡。商用前先看下面的“[商用](#商用)” |
+| 不包含 | 出参考图（定妆图） | 任何出图工具；只写了做法：[参考图怎么出](docs/参考图怎么出.md)。不用 FlashVSR 的放大做法见 [放大（可选）](docs/放大（可选）.md) |
 
 为什么要它：从剧情出发每次重写打戏，H3 常常打得像流水账、机位死板、刀插进身体、两人换边。这个库里的写法都出过片、人工看过；踩过的坑写成了检测规则，写错了提交前就会被拦下。
 
@@ -126,7 +127,7 @@ ffmpeg -sseof -0.05 -i out/fight01.mp4 -frames:v 1 out/fight01_last.png
 python3 工具/出片.py my_fight2.txt --名字 fight02 --输出 out/ --参考图 hero.png arena.png rival.png --首帧 out/fight01_last.png
 ```
 
-库里的 `k4d` 就是用这个流程从库里整句搬出来的一段：照着 `库/来源/k4d.txt` 换人物和武器，是最快的入门。
+库里的 `k4f` 是照 5 镜头写法写的入门样例：照着 `库/来源/k4f.txt` 换人物和武器，是最快的入门。它是从上面演示 GIF 里的 `k4d`（旧的 6 镜写法，时间点按 15 秒片排）重排来的，两条对照着看，能看出 10 秒里每个镜头该写几招。`k3f` 是 `k4f` 的前一段，同样是 5 镜头写法，两条拼起来是 20 秒：要写两段连着打的片子，照这一对看每段怎么分招、前一段的结尾怎么停在后一段的开头上。
 
 ## 固定部件和参数
 
@@ -156,18 +157,40 @@ python3 工具/出片.py my_fight2.txt --名字 fight02 --输出 out/ --参考�
 
 ```
 SKILL.md            给 AI 助手读的写法说明（人也可以照着做）
+运动.md              滑雪这类运动大动作的写法
+广告后期.md          把成片做成广告：放大、配乐、旁白、品牌结尾、响度
 库对照.md            库的中文对照页（自动生成，给人看）
 库/                  来源提示词、镜头块、词句、招式表、踩坑表；模板/ 放你自己搭的工作流
-工具/                检查.py 查重复.py 建库.py 出片.py 自检.py 加字幕.py 查字幕.py 去字幕.py 生成对照页.py
+工具/                写提示词：检查.py 查重复.py 建库.py 生成对照页.py
+                     出片：出片.py 连接.py 自检.py
+                     字幕：加字幕.py 查字幕.py 去字幕.py
+                     广告后期：放大_flashvsr.py 配乐能量.py 广告合成.py
+测试/                回归测试（不用显卡，也不用 ComfyUI）
 docs/                工作流怎么搭、参考图怎么出、放大（可选）、效果 GIF
 config.example.json  出片连接配置样例
 ```
 
+改了库或工具之后跑一遍测试：
+
+```bash
+python3 -m unittest discover -s 测试
+```
+
+它会核对三件事：A 级来源全部通过检查、B 级全部不通过；`镜头块.json` 和 `库对照.md` 与来源一致（改了来源要重跑 `工具/建库.py`）；`出片.py` 在连不上、被 ComfyUI 拒绝、任务丢失时都会停下来说明原因。
+
 ## 许可与致谢
 
 - `工具/` 中的代码采用 [MIT](LICENSE)。
-- 本项目的提示词库（`库/`、`库对照.md`）和演示 GIF（`docs/效果/`）采用 [CC BY-NC 4.0](库/LICENSE.md)。署名、修改标注和第三方来源见许可说明。
+- 本项目的提示词库（`库/`、`库对照.md`）和演示 GIF（`docs/效果/`）采用 [CC BY-NC 4.0](库/LICENSE.md)。署名、修改标注和第三方来源见许可说明。商用见下面的“[商用](#商用)”。
 - **致谢**
   - BUNNY 作者（Hugging Face [JOKER141](https://huggingface.co/JOKER141)，Civitai 上叫 FourBunny）：三个打斗 LoRA；16 个招牌写法学自作者的演示提示词（库里只收了短语，原文不随仓库发布）；我们的工作流是在作者公开的 SelfLift 工作流基础上改的（仓库不放工作流文件，只写搭法）。
   - [MiniMax H3](https://huggingface.co/MiniMaxAI/MiniMax-H3) 和 [Comfy-Org](https://huggingface.co/Comfy-Org/MiniMax-H3) 的 ComfyUI 版本；turbo LoRA 的打包者 [drbaph](https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI)；混合主模型 [smhfacct](https://huggingface.co/smhfacct/Minimax-H3-fl2va-ref2va-hybrid-models)；潜空间放大器 [LBH-123-AI](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler)；以及上面三个插件的作者。
 - **请勿**用来生成侵犯他人版权的角色内容，或冒用真人形象。库里的日漫样例已经去掉了所有角色名、招式名和能认出角色的外形描述。
+
+### 商用
+
+想把出的片拿去商用（包括照 [广告后期.md](广告后期.md) 做广告），要分别看下面几层许可：
+
+1. **本库的提示词**：CC BY-NC 4.0，只许可非商业使用。`工具/` 里的代码是 MIT，不受这条限制。
+2. **MiniMax H3 模型**：按 [ComfyUI 官方文档](https://docs.comfy.org/tutorials/video/minimax/minimax-h3)的说法，本地出的片要商用需要 MiniMax 的商用授权，通过 Comfy 获取；在 Comfy Cloud 上出的片已含商用权利。以官方最新说明为准。
+3. **其他模型、LoRA 和插件**：各有各的许可（见上面的模型清单），用之前逐个看清楚。
