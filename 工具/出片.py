@@ -56,7 +56,7 @@ def 上传(本地):
 #   采样节点 = 有 seed 输入的节点；保存节点 = 有 filename_prefix 的节点；参考图 = 接在条件节点 ref_images.ref_image_N 上的 LoadImage。
 模名 = '三参考图.json' if o.参考图 else '无参考图.json'; 模路 = os.path.join(库, '模板', 模名)
 if not os.path.exists(模路):
-    sys.exit(f'没有工作流模板 库/模板/{模名}。照 docs/工作流怎么搭.md 在 ComfyUI 里搭好，用“导出（API）”存成这个文件名。')
+    sys.exit(f'没有工作流模板 库/模板/{模名}。跑 python3 工具/建模板.py 生成；想自己搭就照 docs/工作流怎么搭.md，用“导出（API）”存成这个文件名。')
 j = json.load(open(模路, encoding='utf-8'))
 j = {k: v for k, v in j.items() if not k.startswith('_')}
 找 = lambda f: [k for k, v in j.items() if f(v)]
