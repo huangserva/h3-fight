@@ -5,7 +5,8 @@ on:
   pull_request:
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # 固定 24.04：ubuntu-latest 换成 26.04 后装不了 Python 3.9（macOS 自带的就是 3.9，要保住）
+    runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
