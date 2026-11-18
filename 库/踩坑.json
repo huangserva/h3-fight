@@ -450,6 +450,15 @@
    "检测": "\\bgouge\\b|torn into the slabs|no blood",
    "改法": "刀砍出的痕迹用 groove / cut 写，并正面写颜色（its inside pale grey stone and grey dust），别写 gouge、torn、不要血；交手镜头里少提它，免得镜头凑近",
    "改法状态": "部分有效（r14c：鲜红的 X 形“血痕”没了，脚下新裂纹近景仍带一点暗红褐色，11-17）"
+  },
+  {
+   "名": "朝人直刺画成剑尖顶在身上",
+   "现象": "地面一对一写“他先一记直刺，她侧身让开、把他的剑拍下去”，画成他的剑尖直直顶在她的肩和锁骨上约 0.2 秒，她站着不躲",
+   "出处": "k4d 重排 5 镜的第 1 版 k4e 第 1 镜（11-18，成片 0.2–0.4 秒）",
+   "级别": "提醒",
+   "检测": "straight thrust|lung\\w* [a-z ]{0,20}with a [a-z ]{0,12}thrust|thrusts? [a-z' -]{0,25}(at|toward|towards) (her|him|his|<subject)",
+   "改法": "别写朝人去的直刺。换成斜劈或当头劈，写明两把刀在两人之间相碰（crimson edge against purple edge ringing in the space between them），硬接写明刀架在哪（her Tachi raised level above her head）。更稳的两种：让她的每一下打在他的兵器上（each one striking his jian）；或者他横扫、她后仰从下面躲过（库/来源/k4f.txt 第 5 镜）",
+   "改法状态": "部分有效（k4f：钢刃不再碰到人，当头劈硬接画对了；但第一回合的斜劈仍有约 3 帧紫焰扫过她身体，没画出接住，11-18）"
   }
  ]
 }

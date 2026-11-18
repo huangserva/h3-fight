@@ -4,3 +4,4 @@ __pycache__/
 .DS_Store
 out/
 *.mp4
+库/模板/*.json

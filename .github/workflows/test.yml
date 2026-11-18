@@ -1,0 +1,22 @@
+# 每次推送和 PR 跑一遍回归测试。不用显卡，也不用 ComfyUI。
+name: 测试
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.9', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      # 后期脚本的测试要 ffmpeg、Pillow、opencv；缺了这些测试会自动跳过，核心测试只用标准库
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install Pillow numpy opencv-python-headless
+      - run: python -m compileall -q 工具 测试
+      - run: python -m unittest discover -s 测试 -v

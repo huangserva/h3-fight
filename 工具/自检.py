@@ -13,7 +13,7 @@ def 报(ok, 话, 修=None):
     if not ok and 修: 问题.append(修)
 
 print('一、写提示词要的（检查.py、建库.py）')
-报(sys.version_info >= (3, 8), f'Python {sys.version.split()[0]}', 'Python 要 3.8 以上')
+报(sys.version_info >= (3, 9), f'Python {sys.version.split()[0]}', 'Python 要 3.9 以上')
 try:
     import PIL; 报(True, f'Pillow {PIL.__version__}（加字幕.py、去字幕.py 用）')
 except ImportError:
