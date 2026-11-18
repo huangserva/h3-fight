@@ -1,6 +1,7 @@
 # 用法：
 #   python3 工具/出片.py <提示词.txt> --名字 k4c --输出 <本地目录>
 #        [--参考图 人物.png 场景.png 对手.png] [--加参考图 第4张.png ...] [--首帧 上一段最后一帧.png] [--种子 1] [--不等]
+#        [--题材 运动]     滑雪等大动作运动：检查按运动门槛（不要求打戏招牌写法），不通过照样不提交。部件不换（打戏 LoRA 对滑雪也稳人和器材）。
 #        [--非打斗 "理由"]  变身、登场、收刀这类不是打斗的衔接段：检查只打印不拦，理由记进提交记录。部件照旧不换。
 #        [--只导出]        只生成 ComfyUI 工作流 JSON（API 格式），不提交；可以自己拖进 ComfyUI 或用别的方式跑。
 # 先跑 检查.py，不通过就停（不提交）。有参考图用 库/模板/三参考图.json，没有用 库/模板/无参考图.json。
@@ -21,11 +22,11 @@ C = 配置()
 
 a = argparse.ArgumentParser(); a.add_argument('提示词'); a.add_argument('--名字', required=True); a.add_argument('--输出', required=True)
 a.add_argument('--参考图', nargs='+'); a.add_argument('--首帧'); a.add_argument('--种子', type=int, default=1); a.add_argument('--不等', action='store_true')
-a.add_argument('--加参考图', nargs='+', default=[]); a.add_argument('--非打斗'); a.add_argument('--只导出', action='store_true')
+a.add_argument('--加参考图', nargs='+', default=[]); a.add_argument('--非打斗'); a.add_argument('--题材', default='打戏', choices=['打戏', '运动']); a.add_argument('--只导出', action='store_true')
 o = a.parse_args(); os.makedirs(o.输出, exist_ok=True)
 
-错, 醒, 数 = 查(o.提示词)
-print('检查：', '通过' if not 错 else '不通过', 数)
+错, 醒, 数 = 查(o.提示词, 题材=o.题材)
+print(f'检查（{o.题材}）：', '通过' if not 错 else '不通过', 数)
 for x in 错 + 醒: print('  ', x)
 if 错 and not o.非打斗: sys.exit('检查不通过，没有提交。先改提示词。')
 if 错: print('非打斗段，检查不拦：', o.非打斗)

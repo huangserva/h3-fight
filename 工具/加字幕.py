@@ -15,7 +15,7 @@ from 共用 import 配置
       '/usr/share/fonts/noto-cjk/NotoSansCJK-Regular.ttc', '/usr/share/fonts/truetype/wqy/wqy-microhei.ttc']
 字体文件 = next((f for f in 候选 if f and os.path.exists(os.path.expanduser(f))), None)
 if not 字体文件: sys.exit('找不到中文字体：在 config.json 里写 subtitle_font（字体文件路径）')
-字体 = ImageFont.truetype(os.path.expanduser(字体文件), round(高 * 0.052))
+字体 = ImageFont.truetype(os.path.expanduser(字体文件), round(高 * 0.052)); 描边 = max(2, round(高 * 0.0045))   # 928 高时 4 像素
 条 = []
 for 行 in open(表, encoding='utf-8'):
     行 = 行.strip()
@@ -25,9 +25,9 @@ for 行 in open(表, encoding='utf-8'):
 临 = tempfile.mkdtemp(); 输入 = ['-i', 入]; 链 = []; 上 = '0:v'
 for i, (a, b, 字) in enumerate(条):
     图 = Image.new('RGBA', (宽, 高), (0, 0, 0, 0)); 画 = ImageDraw.Draw(图)
-    框 = 画.textbbox((0, 0), 字, font=字体, stroke_width=4)
+    框 = 画.textbbox((0, 0), 字, font=字体, stroke_width=描边)
     x = (宽 - (框[2] - 框[0])) // 2; y = int(高 * 0.88) - (框[3] - 框[1])
-    画.text((x, y), 字, font=字体, fill=(255, 255, 255, 255), stroke_width=4, stroke_fill=(0, 0, 0, 255))
+    画.text((x, y), 字, font=字体, fill=(255, 255, 255, 255), stroke_width=描边, stroke_fill=(0, 0, 0, 255))
     p = os.path.join(临, f'{i}.png'); 图.save(p); 输入 += ['-i', p]
     链.append(f"[{上}][{i + 1}:v]overlay=0:0:enable='between(t,{a},{b})'[s{i}]"); 上 = f's{i}'
 subprocess.run(['ffmpeg', '-v', 'error', '-y', *输入, '-filter_complex', ';'.join(链), '-map', f'[{上}]', '-map', '0:a?',

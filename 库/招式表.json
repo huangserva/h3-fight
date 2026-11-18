@@ -84,6 +84,60 @@
    "认": "snakes? (bite|snap|go limp)|fans? roar like|drumstick (drops|falls)|like a gong|blower",
    "写法": "the two little snakes on his staff bite the edge of the card and get their teeth stuck",
    "适合": "喜剧片：把人物的道具和台词梗演进打斗里（射雕：小蛇咬卡、风扇鼓风机、一脚“踢出董事局”）"
+  },
+  {
+   "名": "射箭",
+   "认": "\\b(long)?bows?\\b|\\b(fires?|shoots?|looses?|nocks?|releases?) [a-z' ]{0,25}arrows?\\b|\\barrows? (strikes?|hits?|pierces?|streaks?|slams?)|(storm|rain|volley) of [a-z ]*arrows",
+   "写法": "still running, <A> turns at the waist and looses three arrows in rapid succession at supersonic speed, each a streak of green wind that strikes <B>'s armor in a burst of sparks",
+   "适合": "远程兵器（弓、弩、飞刀）。边跑边回身射、腾空箭雨、贴身连射、最后一箭射穿要害（浮桥追逐，11-16 人工“特别优秀”）"
+  },
+  {
+   "名": "追逐",
+   "认": "\\bchas(e|es|ing)\\b|runs? (along|toward|across)|wades? after|flees?|pursu",
+   "写法": "a fast tracking shot running alongside <A> at plank level, staying on the same side: she runs toward the left, <B> wades after her on the right",
+   "适合": "一方逃一方追，换空间、拉节奏；跟拍写明谁往哪跑、追的人在哪一侧（浮桥追逐）"
+  },
+  {
+   "名": "攀爬巨物",
+   "认": "(runs?|sprints?|climbs?) up (its|his|the) (fore)?arm|(lands?|leaps?|jumps?) (across the gap )?onto (its|his|the) (fore)?arm|off (its|his|the) (golem's |giant's )?shoulder|climbs? (onto|up) (its|his)",
+   "写法": "<A> leaps onto <B>'s outstretched arm and runs straight up it toward the shoulder, firing point-blank as she goes",
+   "适合": "以小打大：沿手臂往上跑、从肩头腾空、贴身打要害（浮桥追逐第 2 段）。巨物的手要写整条手臂和身体都在画面里"
+  },
+  {
+   "名": "兵器缠绕",
+   "认": "wraps? (around|round) (his|her|the) (staff|fan|blade|sword|spear|arm)|whip wraps",
+   "写法": "the whip wraps around the middle of <B>'s staff; he plants his feet and yanks, pulling <A> off her feet toward him",
+   "适合": "软兵器（鞭、链、绳镖）对长兵器：缠住→拽→借力反打（石窟二对二）"
+  },
+  {
+   "名": "同伴配合",
+   "认": "steps? in (behind|in front of) (him|her|<subject \\d>)|steps? onto the other end|back to back|the pairs swap|covers? (his|her) (partner|ally)|saves? (him|her) from",
+   "写法": "<A> plants one end of his staff in the sand; <C> runs up and steps onto the other end, and <A> heaves the staff upward, launching him high into the air",
+   "适合": "二对二、多人：替同伴挡招、用兵器把同伴撑上天、背靠背、冲锋中换对手（石窟二对二）"
+  },
+  {
+   "名": "夹住兵器",
+   "认": "crosses (his|her) (twin )?(sabres|swords|blades|daggers)|catches the (dart|blade|sabre|sword|spearhead|tip)[a-z' ]{0,30}(between|in the cross)|(sabre|blade|sword) slides? down between (two )?(ribs|blades)|traps? (the|his|her) (blade|sabre|sword|spear|dart) (between|in)",
+   "写法": "<A> crosses her twin sabres in front of her like open scissors and catches <B>'s blade in the cross of the blades with a ringing clang, then snaps the blades shut and yanks; the weapon is ripped out of <B>'s hand",
+   "适合": "双刀、扇、叉这类能“夹”的兵器的招。夹住→一拧/一拽→对方脱手，三步都写出来（石窟第 6 段镜 1 验证过）"
+  },
+  {
+   "名": "折断兵器",
+   "认": "(blade|sabre|sword|spear|shaft|staff) snaps? in two|snaps? (in two|clean in half)|breaks? into two halves|broken hilt|broken half of the (blade|sabre|sword|spear)|(sword|sabre|blade|spear|axe|whip) is ripped out of|ripped out of (his|her) hands?|(hilt|sabre|sword) drops (into|onto) the sand",
+   "写法": "in one fluid motion the trapped blade snaps in two with a sharp crack, the upper half spinning high into the air; <B>'s hand opens and the broken hilt drops into the sand",
+   "适合": "缴械、折刃。断要写成看得见的结果（上半截翻着飞上天），只写“手腕一拧就断”H3 画不出来（石窟第 6 段镜 3）"
+  },
+  {
+   "名": "枪棍圈压",
+   "认": "(outward|inward) circle|presses? (his|her|the [a-z']+) (arm|blade|spear|staff) down|(spear|staff) butt|blunt butt|butt (of the|of his|of her) (spear|staff)",
+   "写法": "<A> turns the spear in a small outward circle and the shaft sweeps <B>'s strike wide, reverses into an inward circle and presses <B>'s arm down, then flips the spear around and drives the blunt butt into <B>'s chest; <B> folds in half and slides back across the ground",
+   "适合": "长枪、长棍的拦、拿、扎（枪尾顶）。两头都能用，比只用枪尖戳好看（石窟第 6 段镜 2 验证过）"
+  },
+  {
+   "名": "回身突刺",
+   "认": "turning thrust|turns? (his|her) back as if|spins and whips the (spear|staff|sword|sabre|blade)|knocks? the [a-z ]{0,12}helmet",
+   "写法": "<A> turns his back as if to step away, then spins and whips the spear back around in one turning thrust; brief slow-motion as the spearhead streaks over <B>'s head and knocks the helmet clean off",
+   "适合": "回马枪、回身剑一类的诈败反击，做收尾一招。挑盔、挑冠、挑发带都行，别直取要害（石窟第 6 段镜 5 验证过）"
   }
  ],
  "近身细分_说明": "近身手部对打的细分。日漫测试 A 的近身镜头写的都是笼统词：trade punches and kicks at blinding speed、a furious close-range combo、a frantic flurry of punches and kicks、fists crashing together，H3 就画成同一种你一拳我一拳，看片说“像早年的老动画”。写法：每个近身镜头写 ≥ 3 个具体回合，每个回合写成“<A> 出什么招 → <B> 怎么接/怎么挨”，回合之间换招式、换部位（头/腹/腿/手腕）、换方向；每一下挨打要有看得见的反应（头被打偏、身体对折、被推得滑出去）。整片至少用 6 种细分，同一种最多用 2 次；“对拳互抵”最容易用烂，整片最多 1 次。工具/查重复.py 会数。",

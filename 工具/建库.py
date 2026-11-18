@@ -12,7 +12,7 @@ for 名, v in 说明.items():
     shots = 镜头(读(os.path.join(库, '来源', 名 + '.txt')))
     assert len(shots) == len(标注[名]), (名, len(shots), len(标注[名]))
     for (n, s), (用途, 要点) in zip(shots, 标注[名]):
-        块.append({'编号': f'{名}-{n}', '来源': 名, '等级': v['等级'], '打法': v['打法'], '风格': v['风格'], '用途': 用途,
+        块.append({'编号': f'{名}-{n}', '来源': 名, '等级': v['等级'], '题材': 题材of(v), '打法': v['打法'], '风格': v['风格'], '用途': 用途,
                   '中文要点': 要点, '五样': 认五样(s), '字数': len(s), '成片': v['成片'], '英文原文': s})
 json.dump(块, open(os.path.join(库, '镜头块.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 A = {名: 读(os.path.join(库, '来源', 名 + '.txt')).lower() for 名, v in 说明.items() if not 名.startswith('_') and v['等级'] == 'A'}

@@ -27,9 +27,20 @@ def 镜头(text):
     """返回 [(镜头号, 文字)]，文字不含 [Shot n] 标签。"""
     return [(int(m.group(1)), m.group(2).strip()) for m in re.finditer(r'^\[Shot (\d+)\]\s*(.*)$', text, re.M)]
 
-def 认五样(s):
+# 运动题材（滑雪等）补充的五样词：只在 题材=运动 时加进去，打戏的认法不变。
+运动五样 = {
+ '招式': r"tuck|carv|turn|takeoff|takes off|pops?\b|backflip|front ?flip|rotat|lands?\b|touches down|slams down|straight-lines|accelerat|rides? (up|away|out)|hockey stop",
+ '后果': r"spray|plume|rooster tail|powder (bursts?|explodes?)|snow (bursts?|explodes?|streams?)|sinks?\b|crater|tracks?\b",
+ '特效': r"glitter|sparkl|sun ?flare|sunlight|golden light|snow crystals|rim light",
+}
+
+def 认五样(s, 题材='打戏'):
     t = s.lower()
-    return [k for k, p in 五样.items() if re.search(p, t)]
+    return [k for k, p in 五样.items() if re.search(p, t) or (题材 == '运动' and k in 运动五样 and re.search(运动五样[k], t))]
+
+def 题材of(v):
+    """来源说明里没写题材的，都是打戏。"""
+    return v.get('题材', '打戏')
 
 def 词句表():
     d = json.load(open(os.path.join(库, '词句.json'), encoding='utf-8'))
@@ -44,16 +55,16 @@ def 数招牌(text):
 def 词(s): return re.findall(r"[a-z0-9']+", s.lower())
 def 五元(w, n=5): return {tuple(w[i:i + n]) for i in range(len(w) - n + 1)}
 
-def 库原文(排除=None, 等级=('A',)):
-    """A 级来源全部镜头文字的 5 词片段集合；排除 = 来源名（自测时去掉自己）。"""
+def 库原文(排除=None, 等级=('A',), 题材='打戏'):
+    """A 级来源全部镜头文字的 5 词片段集合；排除 = 来源名（自测时去掉自己）；只算同题材（打戏 / 运动）的来源。"""
     说明 = json.load(open(os.path.join(库, '来源说明.json'), encoding='utf-8'))
     池 = set()
     for 名, v in 说明.items():
-        if 名.startswith('_') or v['等级'] not in 等级 or 名 == 排除: continue
+        if 名.startswith('_') or v['等级'] not in 等级 or 名 == 排除 or 题材of(v) != 题材: continue
         for _, s in 镜头(读(os.path.join(库, '来源', 名 + '.txt'))):
             池 |= 五元(词(s))
     return 池
 
-def 原句比例(text, 排除=None):
+def 原句比例(text, 排除=None, 题材='打戏'):
     g = 五元(词(' '.join(s for _, s in 镜头(text))))
-    return len(g & 库原文(排除)) / max(1, len(g))
+    return len(g & 库原文(排除, 题材=题材)) / max(1, len(g))

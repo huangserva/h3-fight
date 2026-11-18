@@ -71,7 +71,7 @@
    "级别": "提醒",
    "检测": "",
    "改法": "后面还要用的道具，在场景定义里写清当前状态和“stays ... throughout this video”；大招别朝它的方向打；检查会列出镜头里提到、场景定义里没交代状态的道具",
-   "改法状态": "待验证"
+   "改法状态": "已验证：写了要变的照写发生（斩竹、犁沟、砍旗杆、塌城垛、打穿鼓面），没写的一直不变（灯笼、石亭、城楼）（2026-11-15 连续性验证两场：竹林+断玉人物、雪夜城楼+新人物，各 4 段）"
   },
   {
    "名": "剧情塞进打戏段",
@@ -125,7 +125,7 @@
    "级别": "提醒",
    "检测": "",
    "改法": "上一段末帧是特写时，下一段第 1 镜写明“<Subject 1> on the left, <Subject 4> on the right”；或者上一段用全景收尾",
-   "改法状态": "待验证"
+   "改法状态": "已验证：上一段停在两刀相抵特写、下一段钉首帧，第 1 镜切全景时写明 <Subject 1> on the left … <Subject 4> on the right，两场都没翻边（2026-11-15 连续性验证两场：竹林+断玉人物、雪夜城楼+新人物，各 4 段）"
   },
   {
    "名": "多段打戏动作单一",
@@ -151,8 +151,17 @@
    "出处": "真人古装武侠测试（看片指出）",
    "级别": "提醒",
    "检测": "",
-   "改法": "每段场景定义开头写当前破坏状态（已经这么写了仍出现）；再加：首帧必须钉上一段最后一帧，且第 1 镜写“continuing from the first frame, the cracked platform ...”；拼片时检查接缝前后地面",
-   "改法状态": "待验证"
+   "改法": "打坏之后的段：①换同机位的“打坏版”场景图；②场景定义开头写开场状态 + “stays … throughout this video”；③首帧钉上一段最后一帧，第 1 镜写 continuing from the first frame 并列出坏掉的东西；④打坏的东西只写剩下的样子，别写成完好名词（见踩坑“打坏的东西写成完好名词”）",
+   "改法状态": "已验证（①②③）：竹林两段裂沟、断竹一直在；城楼战鼓破洞、裂缝、塌城垛一直在。城楼旗杆在升镜头时长回来一次，原因归到新坑“打坏的东西写成完好名词”（2026-11-15 连续性验证两场：竹林+断玉人物、雪夜城楼+新人物，各 4 段）"
+  },
+  {
+   "名": "打坏的东西写成完好名词",
+   "现象": "城楼第 3 段：旗杆已在上一段被砍断（首帧和打坏版场景图里都是断桩），升镜头一动，断桩处长出一根完整的新旗杆挂着旗（旗样也不同），这一镜结束才变回断桩",
+   "出处": "连续性验证第二场 雪夜城楼 wall_s3（2026-11-15）",
+   "级别": "提醒",
+   "检测": "\\b(tall|standing|upright|whole|intact)\\b[a-z ,'-]{0,40}\\b(flagpole|pole|pillar|column|tree|bamboo|mast|statue|tower)\\b[^.;:]{0,60}\\b(already|cut|severed|broken|snapped|collapsed|fallen|toppled)\\b",
+   "改法": "打坏的东西只写剩下的样子：a short broken stump stands where the flagpole used to be, the banner lies flat in the snow；再补一句否定：there is no standing flagpole and no banner in the air anywhere in this video。别写“the tall wooden flagpole … already cut through”（H3 先抓住了“高旗杆”）",
+   "改法状态": "待验证（竹林写的是“already cut down to smooth slanted stumps”，主语就是断桩，没出事；城楼按新写法还没出片）"
   },
   {
    "名": "远程招式方向不对",
@@ -233,7 +242,7 @@
    "级别": "提醒",
    "检测": "",
    "改法": "新人物进场写成从画外进来（<Subject 1> runs into the frame from the left / the camera pans left to reveal <Subject 1>），或者让上一段最后一镜就带到他；已出的片子在接缝加 0.3 秒叠化",
-   "改法状态": "待验证（提示词改法没出片；这次用叠化修）"
+   "改法状态": "已验证：第 1 镜写“开头只有两人，三个弟子/骑兵从画外跳进来”，两场第 1 帧都只有两人，人从画外进来、人数一直对（2026-11-15 连续性验证两场：竹林+断玉人物、雪夜城楼+新人物，各 4 段）；日漫测试第二集第 2→3 段已出的片子用叠化修过"
   },
   {
    "名": "灵魂/幽灵画成实心的人",
@@ -252,6 +261,195 @@
    "检测": "",
    "改法": "情绪反应单独给一镜、至少 2–3 秒，用特写（脸、发抖的拳头），别和别人的动作挤在同一镜；或者用“拳头特写”这类具体画面代替抽象的发抖（第 4 段的流血拳头特写就出来了）",
    "改法状态": "待验证"
+  },
+  {
+   "名": "预出的打坏图和实际打坏对不上",
+   "现象": "上一段之前就画好的打坏版场景图，和 H3 在上一段里实际打坏的样子不一样（预出图柱子断成三截、佛手断一只；实际是一整根长柱倒在中间、两只佛手都从手腕断了）。下一段挂预出图会和首帧打架，坏的样子来回变",
+   "出处": "补打法 石窟二对二 第 1 段（11-16）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "打坏之后的段，场景图等上一段出完再出：Codex 以完好版场景图为底图（管机位）、上一段尾帧为参考（管坏成什么样）出一张“按实际打坏”的图，场景定义也照尾帧里实际的样子写（哪根倒了、横在哪、哪些还立着）。预出的打坏图只在提前规划或单段时用",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "10 秒片写成 15 秒的镜头时间",
+   "现象": "照作者 0、1、4、7、10、12 秒写 6 镜，H3 只出 10 秒：实际只成 4–5 镜，第 1 镜压成 0.5–0.9 秒，10 秒、12 秒两镜各剩约 1 秒；一个镜头塞 5–8 个动作，每招都只画一半（没起手、没挡、没反应），人工看着“出招不够完整、有点单一”",
+   "出处": "补打法 石窟二对二 第 1–5 段（11-16），切点 s1 0.54/1.00/3.88/7.83/9.00，s5 0.54/3.83/7.83/8.96",
+   "级别": "提醒",
+   "检测": "\\bat 00:(09|1\\d)\\.",
+   "改法": "按 10 秒排 5 镜：0 / 2 / 4.5 / 6.5（特写）/ 7.5（制胜+收尾）秒；每个交手镜头只拍一对，写 2–3 个“起手→接挡→看得见的反应”完整回合，用兵器自己的招（见 SKILL.md）",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "徒手写成 knife-hand，画成手里拿刀",
+   "现象": "写“用 knife-hand（手刀）劈开光弹”，H3 给徒手的点穴拳手手里画了一把短刀，之后几秒一直握着",
+   "出处": "日漫擂台连战测试 r05 点穴拳手 vs 光弹少年（11-17），约 5–6 秒",
+   "级别": "错误",
+   "检测": "knife-hand|knifehand|hand-knife",
+   "改法": "手刀写成“a chop with the edge of his bare open hand”，人物定义里写明 fights bare-handed；不出现 knife、blade 这类兵器词",
+   "改法状态": "已验证（日漫擂台连战测试 r05b：同一段改写成 a single downward chop of the edge of his bare open hand，人物定义加 His hands are always empty…，点穴拳手全程空手劈开光弹；r17 电手刀少年手刀也没画出刀，11-17）"
+  },
+  {
+   "名": "后空翻画成前空翻",
+   "题材": "运动",
+   "现象": "提示词写了后空翻，甚至按画面写死“逆时针、头往后、板子从前面踢上去”，侧面镜头仍翻成前空翻：雪板从身后甩上去、头往前栽",
+   "出处": "滑雪第 3、4、5 版（11-17）",
+   "级别": "错误",
+   "检测": "",
+   "改法": "三件事一起做：地形合物理（后空翻要有小翘边或平顶，崖顶朝下坡最适合前空翻）；挂一张“转到四分之一”的姿势图（后空翻：背朝下、胸口朝天、头朝来的方向）；提示词写 a quarter of the way round he is exactly like <Subject n> in <Picture n>。检查.py 运动模式：有空翻却没写 exactly like 的直接报错",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "起跳翘边画成牛角",
+   "题材": "运动",
+   "现象": "只写 a smooth curved snow lip that kicks up like a natural ski jump，H3 和 Codex 画成又高又弯的牛角，人也没从它上面滑过去",
+   "出处": "滑雪第 6 版（11-17），人工：“这个画的牛角很夸张”",
+   "级别": "提醒",
+   "检测": "curved snow lip|curled (snow )?(lip|cornice)",
+   "改法": "写尺寸和角度：a small, smooth, natural wind-drifted snow lip, about waist high, that curves upward by about fifteen/twenty degrees like a natural ski jump kicker - NOT a horn, NOT a long curled cornice, NOT overhanging；并先用 Codex 画场景图定死",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "首帧静止丢速度",
+   "题材": "运动",
+   "现象": "在冲刺途中切段，下一段首帧是一张静止画面，H3 不知道人原来的速度，让他原地一蹦、贴着坡面翻；上一段结尾写“直起身准备起跳”人也会减速",
+   "出处": "滑雪第 3 版（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "靠冲力的动作（助滑→起跳→空中→落地）放在同一段；切段选在匀速运动或原本切镜处；第 1 镜写 already racing at full speed … keeps the momentum；首帧可直接用 Codex 画的高速助滑关键帧。检查.py 运动模式会提醒",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "大悬崖空翻写成抱紧团",
+   "题材": "运动",
+   "现象": "写 pulls his knees to his chest / compact tuck，那是小跳台、时间紧的做法；大悬崖滞空长，专业滑手是先起转、转到一半看落地点，然后身体放开慢慢转",
+   "出处": "滑雪第 3、5 版（11-17），断崖空翻核对.md",
+   "级别": "提醒",
+   "检测": "pulls? (his |her )?knees (up )?to (his |her )?chest|tucks? (his knees|tight)|compact tuck",
+   "改法": "写 his body stays long and open, knees only slightly bent, the rotation is slow and smooth because the cliff is big; just past halfway he spots the landing",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "原地往上跳",
+   "题材": "运动",
+   "现象": "写 leaps straight upward, not backward（小跳台练空翻的要领），断崖上就成了原地一蹦、没有往前飞的冲力",
+   "出处": "滑雪第 3 版（11-17）",
+   "级别": "提醒",
+   "检测": "leaps? straight up(ward)?|not backward",
+   "改法": "写带足速度冲出去：his speed carries him far forward and out over the drop … a long, high parabolic arc that first goes up and only then curves down",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "换机位地形变形",
+   "题材": "通用",
+   "现象": "只挂一张侧面场景图，切到坡下仰拍时岩壁变成圆顶的另一块",
+   "出处": "滑雪第 4、7 版（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "每个要保持地形的机位各画一张这个机位的关键帧挂上（坡下仰拍画成落地图），镜头里写 the same framing as <Picture n> … keeps exactly the shape of <Picture 2>, never a rounded dome or a different rock",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "关键瞬间挤在镜尾没力",
+   "题材": "通用",
+   "现象": "落地写在仰拍镜头末尾，触地那一下只扬了一点雪",
+   "出处": "滑雪第 7、8 版（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "把要加强的瞬间单独拆成约 1 秒的一镜：专门的贴地机位 + 关键帧 + 短慢动作 + 镜头震动；材质写对（bottomless powder more than a metre deep）。第 9 版起落地明显有力；触地瞬间身体仍偏直，可再写“触地前已屈膝下蹲”（待验证）",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "关键帧幅度被缩小",
+   "题材": "通用",
+   "现象": "提示词写“比崖顶高一个半人身”，H3 画出来只比崖顶高半个人身；关键帧图本身不够高时更低",
+   "出处": "滑雪第 9、10 版（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "幅度用关键帧定，并画得比目标略大（最高点图画到头盔离崖顶一个多人身，出片约一个人身）；写 At the very top of the arc he is exactly like <Subject n> in <Picture n>",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "TTS 念不准自造品牌名",
+   "题材": "通用",
+   "现象": "CosyVoice3 试读自造品牌名的五种拼法，转写结果都与预期不符",
+   "出处": "滑雪风镜广告旁白（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "品牌名靠结尾画面大字，旁白只念口号；每句旁白用 语音识别 转写核对",
+   "改法状态": "已验证"
+  },
+  {
+   "名": "上一段撕掉的衣服又穿回来",
+   "现象": "上一段肌肉壮汉上衣被撕掉、赤膊；下一段他又穿着定妆图里的黑色紧身上衣",
+   "出处": "日漫擂台连战测试 r07→r08（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "人物外形变了（撕衣、受伤、变身）的段，定妆图换成变化后的样子（Codex 以原定妆图为参考画一张，如“赤膊、腰间挂撕破的黑布”），人物定义也写变化后的样子（bare-chested with no shirt at all, … torn off in the previous fight）",
+   "改法状态": "已验证（r08b 换赤膊定妆图后，肌肉壮汉全程赤膊，11-17）"
+  },
+  {
+   "名": "文字里的兵器数被带偏",
+   "现象": "三刀流剑士多数时候只拿两把刀；拔刀剑士（一把刀）开头像拿着两把",
+   "出处": "日漫擂台连战测试 r14（写了 attacks at once with two swords）、r10（写了 the two blades having clashed）（11-17）",
+   "级别": "提醒",
+   "检测": "\\b(with|holding|wielding) two (swords|blades|katanas)\\b|\\bthe two blades\\b",
+   "改法": "动作句里别出现和人物兵器数不符的数量词（两人各一把写成 his single katana and <A>'s sword）；人物定义写死数量：carrying only one single katana … never holds two swords / at every moment he holds all three swords at once, one in each hand and one in his teeth",
+   "改法状态": "已验证（r10b 拔刀剑士全程一把刀；r14b 三刀流剑士基本一直三把刀，11-17）"
+  },
+  {
+   "名": "招牌连招塞在一镜里只出一半",
+   "现象": "踢上天→缠住→倒栽砸下的连招（踢上天→绷带缠住→倒栽砸下）写在同一镜，出片只有踢上天和砸下，绷带缠人没画；摆动连打写成“figure-eight”看不出来",
+   "出处": "日漫擂台连战测试 r01（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "多步招拆到相邻两镜：前一镜结尾做起手（踢上天），后一镜专门做最有辨识度的那一步，写成看得见的画面（long strips of white bandage … several tight, clearly visible white loops）；身法写成路径 + 残影（dipping low to the left, then low to the right, like a swinging pendulum, afterimages trailing）",
+   "改法状态": "已验证（r01b 摆动连打带残影、绷带一圈圈缠住都出来了；代价是原来带旋风的木叶旋风没了，11-17）"
+  },
+  {
+   "名": "起手仪式写在特写里看不出",
+   "现象": "拳手“画星座起手”写在脸部特写里，出片只有手势，没有星座",
+   "出处": "日漫擂台连战测试 r20（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "起手仪式放在交手镜头结尾，用全身或中景，写成具体画面（thirteen bright points of light appear behind him one by one and connect with lines of light into the large shining shape of a winged horse），下一镜开头写 still glowing behind him 接着用",
+   "改法状态": "已验证（r20b 星座连线清楚、第 5 镜还在，11-17）"
+  },
+  {
+   "名": "两人都带气焰缠成一团",
+   "现象": "瞬移砸下那一镜两人都裹着金色气焰，缠成一团看不清谁砸谁",
+   "出处": "日漫擂台连战测试 r24（写了 a burst of golden light flaring around his body）（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "近身交手镜头不写任何身体发光（burst of light → burst of dust），写一句 Both keep their black hair and neither has any glowing aura in this shot; their two bodies stay clearly separate；光只留给远程大招",
+   "改法状态": "部分有效（r24b 两人分得清、没有气焰；但下砸那一下落到地上，没砸中对手，11-17）"
+  },
+  {
+   "名": "倒下太快看不见",
+   "现象": "大刀剑士被手刀打中后掉下台只有几帧，几乎看不到；镜头里残影写得多，闪切也多（19 个切点）",
+   "出处": "日漫擂台连战测试 r17（11-17）",
+   "级别": "提醒",
+   "检测": "",
+   "改法": "输家倒下写成慢动作的完整过程：身体僵住 → 兵器脱手落地 → 踉跄两步 → 栽下台 → 落地扬尘（clearly shown）；少写 afterimage / flicker / vanishes，写 one continuous take",
+   "改法状态": "已验证（r17b 倒下清楚，切点 19→12，11-17）"
+  },
+  {
+   "名": "断掉的兵器插进地里画成整把",
+   "现象": "写“断成两截，上半截插进草地”，断的瞬间画出来了，但插在草地上的是一把带刀柄的完整的刀",
+   "出处": "日漫擂台连战测试 r12、r12b（11-17）",
+   "级别": "提醒",
+   "检测": "sticks? (point-down |upright )?into the (grass|ground|earth)",
+   "改法": "断刃别写“插进地里”（H3 一写就是整把带柄的刀插着），写成 the broken half clatters onto the stone and lies flat，或干脆让它飞出画面；断的那一下写清 holding the hilt with only a short jagged stump",
+   "改法状态": "待验证（r12b 改了断口写法：断开、手里剩半截都出来了；插地那把仍带柄）"
+  },
+  {
+   "名": "刀痕裂缝画成血",
+   "现象": "台面的 X 形深沟在近景里出现暗红、像血的痕迹；加一句“不要血、不要红色”后反而更红",
+   "出处": "日漫擂台连战测试 r14、r14b（11-17）",
+   "级别": "提醒",
+   "检测": "\\bgouge\\b|torn into the slabs|no blood",
+   "改法": "刀砍出的痕迹用 groove / cut 写，并正面写颜色（its inside pale grey stone and grey dust），别写 gouge、torn、不要血；交手镜头里少提它，免得镜头凑近",
+   "改法状态": "部分有效（r14c：鲜红的 X 形“血痕”没了，脚下新裂纹近景仍带一点暗红褐色，11-17）"
   }
  ]
 }
