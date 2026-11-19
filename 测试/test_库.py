@@ -120,7 +120,9 @@ class 五镜时间表(unittest.TestCase):
             return 查(p)
 
     def test_库里的五镜来源不中(self):
-        新 = [名 for 名, v in 说明.items() if v['等级'] == 'A' and 题材of(v) == '打戏' and 时间表(读(来源(名)))[2] == '10 秒']
+        # 快剪的来源（风格里带“快剪”）不算：它们本来就要剪成 0.4 秒一切，第 4 镜是 1 秒的法阵/漩涡或一个短动作，
+        # “交手镜头太短”对它们是预期内的提醒（SKILL.md“特效大场面快剪”第 3 条）
+        新 = [名 for 名, v in 说明.items() if v['等级'] == 'A' and 题材of(v) == '打戏' and 时间表(读(来源(名)))[2] == '10 秒' and '快剪' not in v['风格']]
         self.assertGreaterEqual(len(新), 30)
         for 名 in 新:
             with self.subTest(来源=名):

@@ -1,0 +1,35 @@
+subject_definitions:
+<Subject 1> is the lone swordswoman in <Picture 1>: her young, cool and determined face, long black hair tied in a very high ponytail, dark navy layered martial robe with a dark leather chest guard, dark metal shoulder plates and bracers, dark sash and long flaring robe tails all come from <Picture 1>. She fights with a long slender single-edged sword. Her sword qi, her ice and her light are only ever icy blue-white, never any other color. Her pose and facing direction always follow the action, never the standing pose of the reference picture.
+<Subject 2> is the ruined ancient Chinese walled city under a heavy stormy overcast sky with light rain in <Picture 2>: the massive dark wooden city-gate tower with sweeping tiled roofs and a dark arched gateway, the huge cracked stone-paved plaza in front of it, the ruined palace halls and rooftops on both sides, and the dense horde of hundreds of small dark armored demon soldiers with faint red-orange glowing eyes filling the plaza, all from <Picture 2>.
+<Subject 3> is the visual style definition: 3D CG cinematic realism with top-tier Chinese animation aesthetic (Xianxia/Gufeng), global illumination, physically-based rendering (PBR), dynamic volumetric fog, storm clouds and rain, high-gloss material response, epic large-scale visual effects. The two sides are told apart by color: everything of <Subject 1> glows icy blue-white, everything of the demons glows violet and magenta; neutral explosions burn orange and gold.
+<Subject 4> is the pair of identical demon giants in <Picture 3>: hulking horned giants about four times the height of a man, massively muscled scarred grey-brown skin, a glowing magenta-violet crystal core embedded in the center of the chest, the right forearm a huge black iron cannon barrel with ringed bands, the left hand a clawed hand in a spiked iron gauntlet, spiked dark iron shoulder armor and a tattered dark red loincloth, all from <Picture 3>. Their cannon blasts are only ever violet.
+<Subject 5> is the swarm of winged demons in <Picture 4>: lean dark spiny demons the size of a horse with long torn bat-like wings, whip tails, horned heads and small red-orange glowing eyes, all from <Picture 4>.
+
+summary:
+[reference generation] The target video is a 10-second epic high-fantasy battle in which one lone swordswoman, <Subject 1>, opens her battle against a whole demon army in a ruined walled city, seen from many close and new camera angles: on the gate tower roof, among the falling ice spears, dashing through ice, bursting out of the gate archway and cutting into the giants. It concludes on the key moment: she brings one vertical cut down on a giant's glowing chest core and the explosion blows outward. Icy blue-white against violet keeps the two sides apart. No dialogue or subtitles are present.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1] through [Shot 5]): fully_preserved - Her face, high ponytail, dark navy robe and armor from <Picture 1> and her icy blue-white sword light remain consistent throughout all shots.
+<Subject 2> (appears in [Shot 1] through [Shot 5]): fully_preserved - The ruined walled city, the gate tower, the plaza and the demon horde from <Picture 2> keep a consistent design and lighting.
+<Subject 3> (appears in [Shot 1] through [Shot 5]): weak_reference - The overall visual quality adheres to the defined 3D CG cinematic style.
+<Subject 4> (appears where the giants are shown): fully_preserved - The giants' horns, cannon arms and glowing chest cores from <Picture 3> remain consistent.
+<Subject 5> (appears where the winged demons are shown): fully_preserved - The winged demons from <Picture 4> keep a consistent design.
+
+detailed_description:
+The target video utilizes 3D CG cinematic realism with a top-tier Chinese animation aesthetic, global illumination, physically-based rendering, volumetric fog, storm clouds and rain. The palette is cold dark blue-grey storm light, lit by her icy blue-white sword light against the violet of the demons and orange-gold explosions. Everything moves at full real-time speed with no slow motion anywhere; every shot is a different camera angle, each one cutting in on the most violent instant of the action.
+
+[Shot 1] At 00:00.000, close low angle from behind <Subject 1> on the ridge of the city-gate tower roof, her high ponytail and robe tails snapping in the wind pressure, the whole plaza packed with the demon horde far below; the camera instantly cuts to a close front view of her face as she raises her sword to the sky, icy blue-white light flaring across her eyes, then a high-altitude diving crane shot drops from her toward the plaza.
+
+[Shot 2] At 00:02.000, the camera cuts to ground level among the demon soldiers: a giant spear of icy blue-white light slams into the paving right beside the lens, a chain reaction of ice shards and broken stone bursting outward, soldiers hurled past the camera, high-frequency camera shake; the camera instantly cuts to a view over the huge shoulders of the two giants of <Subject 4>, looking at her small figure far away between the standing ice spears.
+
+[Shot 3] At 00:04.500, the camera cuts to a close front tracking shot as <Subject 1> sprints at supersonic speed straight toward the lens through spraying ice crystals, her sword trailing icy light; the camera instantly cuts to a close side view: a winged demon of <Subject 5> dives at her and with zero lag she cuts it in half with one horizontal arc of icy blue-white sword qi, the two halves tumbling apart, rapid rhythm without drag.
+
+[Shot 4] At 00:06.500, the camera cuts to inside the dark gate archway: <Subject 1> bursts out toward the bright plaza in a black backlit silhouette; the camera instantly cuts to a low angle as she leaps over a row of raised spears and executes three ultra-high-speed strikes in mid-air, leaving icy afterimages, the soldiers below thrown down by the impact wave.
+
+[Shot 5] At 00:07.500, the camera cuts to a close-up of the cannon muzzle of one giant of <Subject 4> charging with violet light and firing; <Subject 1> cuts straight through the violet blast and dissipates the force, the two halves roaring past her. The camera cuts to a low angle close on the giant's glowing magenta chest core as her sword comes down in one vertical cut of icy blue-white light, the camera dropping in a vertical rapid falling shot with the blade; the core cracks and a huge explosion of white and gold blasts outward; then a slow pull-back wide establishing shot of the smoke rolling across the horde, stable framing.
+
+overall_soundscape:
+Storm wind and rain throughout. Every cut lands on a hard sound: crystalline sword-qi slices, shattering ice, the whoosh of wings, crackling lightning, the whine and boom of the violet cannons, heavy footsteps of the giants, roaring fire, and deep explosions that blow through the frame.
+
+non_diegetic_music:
+N/A
