@@ -20,7 +20,7 @@ A method for writing H3 fight prompts, in three layers:
 
 | Layer | Contents | Requirements |
 |---|---|---|
-| **Core: writing prompts** | Shot-block library (408 blocks), phrase parts, move table, pitfall table, the six-section prompt format, `检查.py` (checker), `查重复.py` (repetition check). Big-motion sports such as skiing are covered in [运动.md](运动.md) | Python 3.9+ only. **No GPU needed** |
+| **Core: writing prompts** | Shot-block library (438 blocks), phrase parts, move table, pitfall table, the six-section prompt format, `检查.py` (checker), `查重复.py` (repetition check). Big-motion sports such as skiing are covered in [运动.md](运动.md) | Python 3.9+ only. **No GPU needed** |
 | Optional: rendering | `建模板.py` (generates the workflow; see [工作流怎么搭](docs/工作流怎么搭.md)) plus `出片.py`, which runs check → submit → wait → download → contact sheet → subtitle check | A ComfyUI that runs MiniMax H3 |
 | Optional: ad post-production | Described in [广告后期.md](广告后期.md): `放大_flashvsr.py` (upscale to 2560×1440), `配乐能量.py` (find the heavy beats in a music track to cut it to the picture), `广告合成.py` (voice-over, brand end card, mix, loudness) | ffmpeg and Pillow. Upscaling also needs FlashVSR_Plus and a GPU. Read [Commercial use](#commercial-use) first |
 | Not included | Reference images (character sheets) | Any image tool. Only the method is written down: [reference images](docs/参考图怎么出.md). For upscaling without FlashVSR, see [upscaling (optional)](docs/放大（可选）.md) |

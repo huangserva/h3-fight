@@ -26,20 +26,26 @@ def 长(f): return float(subprocess.check_output(['ffprobe', '-v', 'error', '-sh
 w, h = map(int, subprocess.check_output(['ffprobe', '-v', 'error', '-select_streams', 'v', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', 源[表[0][0]]]).decode().strip().split(','))
 
 # 时间线：每段在成片里的 (起点, 时长)，白闪算进去
+# 每段按整帧算（加速后取整），声音的时间线和画面一帧不差
+帧数 = [max(1, round((b - a) * 24 / v)) for s, a, b, v, 闪 in 表]
 线 = []; t = 0
-for s, a, b, v, 闪 in 表:
-    t += 2 / 24 if 闪 else 0; d = (b - a) / v; 线.append((t, d)); t += d
+for (s, a, b, v, 闪), n in zip(表, 帧数):
+    t += 2 / 24 if 闪 else 0; d = n / 24; 线.append((t, d)); t += d
 总 = t
 
 # 1. 画面
-名 = list(源); 滤 = []; 链 = []
-for i, (s, a, b, v, 闪) in enumerate(表):
+# 每段单独开一个输入（-ss/-t），不在一个滤镜图里对同一条素材反复 trim：
+# 那样每段会多出几帧（11-20 实测 5 段多 20 帧、70 段 30.5 秒的表出成 34.5 秒，画面和声音对不上）。
+入 = []; 滤 = []; 链 = []
+for i, ((s, a, b, v, 闪), n) in enumerate(zip(表, 帧数)):
     if 闪:
         滤.append(f'color=white:s={w}x{h}:r=24:d={2/24:.4f},format=yuv420p,setsar=1[w{i}]'); 链.append(f'[w{i}]')
     淡 = ',fade=t=in:s=0:n=3:color=white' if 闪 else ''
-    滤.append(f'[{名.index(s)}:v]trim={a}:{b},setpts=(PTS-STARTPTS)/{v},fps=24,scale={w}:{h}{淡},format=yuv420p,setsar=1[v{i}]'); 链.append(f'[v{i}]')
+    入 += ['-ss', f'{a:.3f}', '-t', f'{b - a + 0.1:.3f}', '-i', 源[s]]
+    # 加速只抽帧，不叠帧：tmix 叠帧出来是重影（人和刀两层），整条看着糊，11-20 用户看了说“全部都糊了”
+    滤.append(f'[{i}:v]setpts=(PTS-STARTPTS)/{v},fps=24,trim=end_frame={n},setpts=PTS-STARTPTS,scale={w}:{h}{淡},format=yuv420p,setsar=1[v{i}]'); 链.append(f'[v{i}]')
 滤.append(''.join(链) + f'concat=n={len(链)}:v=1:a=0[v]')
-跑(*sum((['-i', 源[k]] for k in 名), []), '-filter_complex', ';'.join(滤), '-map', '[v]', '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', 中间)
+跑(*入, '-filter_complex', ';'.join(滤), '-map', '[v]', '-c:v', 'libx264', '-crf', '16', '-pix_fmt', 'yuv420p', 中间)
 
 # 2. 声音
 起 = []
@@ -55,7 +61,8 @@ for j, s in enumerate(配['底音']):
 for k, (s, a) in enumerate(配.get('重击', [])):
     i = 号.get((s, round(a, 3)));
     if i is None: sys.exit(f'重击 {s} {a} 在表里找不到同样起秒的那一镜')
-    t0, _ = 线[i]; b = 表[i][2]; 长度 = (b - a) + (0.35 if i < len(表) - 1 else 0)
+    # 原声不变速（加速后的声音发虚），从打点开始按原速放，长度跟着画面缩短
+    t0, d0 = 线[i]; 长度 = d0 + (0.35 if i < len(表) - 1 else 0)
     入 += ['-i', 源[s]]; n = len(配['底音']) + k
     滤.append(f'[{n}:a]atrim={a}:{a + 长度:.3f},asetpts=PTS-STARTPTS,aformat=sample_rates=48000:channel_layouts=stereo,'
               f'afade=t=in:d=0.03,afade=t=out:st={max(长度 - 0.15, 0):.3f}:d=0.15,adelay={int(t0 * 1000)}:all=1[击{k}]'); 混.append(f'[击{k}]')
