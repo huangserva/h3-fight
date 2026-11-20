@@ -168,6 +168,8 @@ When you change how you write prompts, don't change parts at the same time, or y
 ```
 SKILL.md            How to write the prompts (for AI assistants; people can follow it too)
 运动.md              How to write big-motion sports such as skiing
+快剪.md              Fast cuts at 0.4 s per shot after a reference: make a long version first, then cut it with 混剪.py
+多段长片.md          Multi-segment fights: avoid repetition, keep continuity
 广告后期.md          Turning a finished clip into an ad: upscale, music, voice-over, brand end card, loudness
 库对照.md            Human-readable overview of the library (generated)
 库/                  Source prompts, shot blocks, phrases, move table, pitfall table; 模板/ holds the workflows you build
